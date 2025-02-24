@@ -23,7 +23,7 @@ export default function Navbar() {
   ];
   return (
     <>
-      <div className="w-full h-full absolute bg-gradient-to-r from-blue-400 to-emerald-400">
+      <div className="w-full   bg-gradient-to-r from-blue-400 to-emerald-400">
         <div className="bg-black grid grid-cols-4 text-white">
           <div>
             PLATINE 942.76 $ <span className="text-red-500">0.47%</span>
@@ -106,7 +106,7 @@ export default function Navbar() {
 
                   {item.label}
                   {item.content.length > 0 ? (
-                    <div className="absolute left-0 top-full hidden group-hover:flex flex-col bg-white shadow-md p-2 w-full">
+                    <div className="absolute z-50 left-0 top-full hidden group-hover:flex flex-col bg-white shadow-md p-2 w-full">
                       {item.content.map((secondItem, index) => (
                         <button
                           key={index}
