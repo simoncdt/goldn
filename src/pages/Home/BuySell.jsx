@@ -3,23 +3,39 @@ import Wrapper from "../../components/Wrapper";
 
 export default function BuySell() {
   return (
-    <div className="bg-gray-200 pt-16 pb-20 px-36 grid grid-cols-2 gap-24 ">
+    <div className="bg-gray-200 pt-16 pb-20 px-36  ">
       <Wrapper>
-        <div className="bg-white px-7 pt-14 pb-20 rounded-xl max-w-[625px] relative">
-          <div className=" text-center text-3xl font-bold px-5">
-            {" "}
-            Achetez vos pieces dor et lingots dor{" "}
+        <div className="grid grid-cols-2 gap-44">
+          <div className="bg-white px-7 pt-14 pb-20 rounded-xl  relative">
+            <div className=" text-center text-3xl font-bold px-5 mb-8">
+              {" "}
+              Achetez vos pieces dor et lingots dor{" "}
+            </div>
+            <div className=" text-center mt-4px-5">
+              Pour acheter de l’Or ou de l’argent, remplissez simplement le
+              formulaire et un de nos conseillers va vous contacte
+            </div>
+            <Button
+              text={"Demande D'achat d'or"}
+              className={
+                " bg-[#5A3C31] absolute -bottom-8 left-1/2 -translate-x-1/2"
+              }
+            />
           </div>
-          <div className=" text-center mt-4px-5">
-            Pour acheter de l’Or ou de l’argent, remplissez simplement le
-            formulaire et un de nos conseillers va vous contacte
+          <div className="bg-white px-7 pt-14 pb-20 rounded-xl  relative">
+            <div className=" text-center text-3xl font-bold px-5 mb-8">
+            Vendez vos pièces d’Or et lingots d’Or
+            </div>
+            <div className=" text-center mt-4px-5">
+            Pour vendre de l’Or ou de l’argent, remplissez simplement le formulaire et un de nos conseillers va vous contacte
+            </div>
+            <Button
+              text={"Demande de vente  d'Or"}
+              className={
+                " bg-[#8F7130] absolute -bottom-8 left-1/2 -translate-x-1/2"
+              }
+            />
           </div>
-          <Button
-            text={"Demande D'achat d'or"}
-            className={
-              " bg-red-500 absolute -bottom-8 left-1/2 -translate-x-1/2"
-            }
-          />
         </div>
       </Wrapper>
     </div>

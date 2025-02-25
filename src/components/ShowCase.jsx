@@ -51,7 +51,7 @@ export default function ShowCase({ title }) {
   ];
   return (
     <>
-      <div className="w-full bg-white">
+      <div className="w-full bg-[#7d7d7d33B]">
         <Wrapper>
           {title ? (
             <div className="text-center text-3xl pt-14">{title}</div>

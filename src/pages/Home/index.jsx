@@ -26,7 +26,7 @@ export default function index() {
           <Review />
           <OfferSection />
           <BuySell/>
-          <News />
+          {/* <News /> */}
           <NewsLetter />
           <ShowCase title={"Nos services"} />
           <Places />

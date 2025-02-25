@@ -9,7 +9,7 @@ export default function Places() {
     "Aix-en Provence ",
   ];
   return (
-    <div className="px-16 py-20 ">
+    <div className="px-16 py-20 bg-white ">
       <Wrapper>
         <div className="text-center mb-16">
           <div className="text-3xl mb-5">

@@ -35,7 +35,7 @@ export default function ReviewSlider() {
     <>
       <Wrapper>
         <div className="text-center py-10">
-          <div className="text-3xl mb-16">Nos Clients temoignent</div>
+          <div className="text-3xl mb-16 font-semibold">Nos Clients temoignent</div>
           <Swiper
             ref={swiperRef}
             slidesPerView={1}

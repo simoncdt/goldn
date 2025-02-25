@@ -32,7 +32,7 @@ export default function Overview() {
         <div className="text-center w-full text-white">
           <Button
             text="Voir les cours de LOR"
-            className={"bg-yellow-300 "}
+            className={"bg-[#8F7130] "}
           />
         </div>
       </div>
