@@ -22,7 +22,7 @@ export default function index() {
               Achetez vos pieces DOR et lingots DOR en ligne
             </div>
             <div className="max-w-3xl mx-auto mb-16">
-              Pour acheter de l’Or ou de l’argent, remplissez simplement le
+              Pour acheter de l’Or, remplissez simplement le
               formulaire de commande en ligne et un de nos conseillers va vous
               contacter pour expliquer les démarches à suivre. La procédure se
               fait en moins de 2 minutes.
