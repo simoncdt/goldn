@@ -22,19 +22,20 @@ body {
 }
 /* styles.css */
 .mySwiper {
-  padding: 60px 40px; /* Ajustez la valeur selon vos besoins */
   box-sizing: border-box; /* Assurez-vous que le padding est inclus dans la largeur totale */
 }
 
 .swiper-slide {
-  text-align: center;
   background: #fff;
   /* Center slide text vertically */
 }
 
 .swiper-slide img {
 }
-.mySwiper {
+.mySwiper2 {
+  padding-left: 20px;
   display: flex;
 }
-
+#second-slider {
+  background-color: red;
+}

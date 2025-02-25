@@ -1,3 +1,5 @@
+import Wrapper from "../../components/Wrapper";
+
 // eslint-disable-next-line react/prop-types
 export default function ShowCase({ title }) {
   const shopIcon = (
@@ -49,22 +51,28 @@ export default function ShowCase({ title }) {
   ];
   return (
     <>
-      <div>
-      {title?<div className="text-center text-3xl mt-14">{title}</div>:""}  
-      
-        <div className="grid grid-cols-4">
-          {showCaseItem.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center p-16 gap-4 "
-            >
-              {item.icon}
-              <div className="w-36 text-center font-bold text-lg">
-                {item.content}
+      <div className="w-full bg-white">
+        <Wrapper>
+          {title ? (
+            <div className="text-center text-3xl pt-14">{title}</div>
+          ) : (
+            ""
+          )}
+
+          <div className="grid grid-cols-4">
+            {showCaseItem.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center p-16 gap-4 "
+              >
+                {item.icon}
+                <div className="w-36 text-center font-bold text-lg">
+                  {item.content}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Wrapper>
       </div>
     </>
   );

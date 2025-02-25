@@ -9,6 +9,7 @@ import "./styleCoin.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
+import { useRef } from "react";
 export default function NewsSLider() {
   const coinItem = [
     {
@@ -19,9 +20,12 @@ export default function NewsSLider() {
       date: "lundi 10 fevrier 2025",
     },
   ];
+  const swiperRef = useRef(null);
+
   return (
     <>
       <Swiper
+        ref={swiperRef}
         slidesPerView={1}
         spaceBetween={35}
         navigation={{
@@ -53,7 +57,7 @@ export default function NewsSLider() {
             <div className="text-base">
               <img
                 src={item.image}
-                className="w-full h-36 mx-auto"
+                className="w-full h-44 mx-auto"
                 alt=""
               />
             </div>
@@ -77,13 +81,19 @@ export default function NewsSLider() {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
-      <div className="text-start w-full  ">
+      <div className="text-start w-full mt-8 ">
         <a className="text-start ml-14 underline">Voir plus dactualites</a>
         <div className="text-end mr-7">
-          <button className="swiper-button-prev-custom    px-2 py-1 mr-3 bg-black/50 text-white rounded-full">
+          <button
+            onClick={() => swiperRef.current.swiper.slidePrev()}
+            className="    px-2 py-1 mr-3 bg-black/50 text-white rounded-full"
+          >
             <i className="bx bx-chevron-left text-3xl"></i>
           </button>
-          <button className="swiper-button-next-custom  px-2 py-1 bg-black/50 text-white rounded-full">
+          <button
+            onClick={() => swiperRef.current.swiper.slideNext()}
+            className="  px-2 py-1 bg-black/50 text-white rounded-full"
+          >
             <i className="bx bx-chevron-right text-3xl"></i>
           </button>
         </div>

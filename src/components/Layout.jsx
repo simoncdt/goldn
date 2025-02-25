@@ -1,6 +1,7 @@
 
-export default function Layout() {
+// eslint-disable-next-line react/prop-types
+export default function Layout({children}) {
   return (
-    <div>Layout</div>
+    <div className="">{children}</div>
   )
 }
