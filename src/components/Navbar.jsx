@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { FaMapMarkerAlt } from 'react-icons/fa';
 import Wrapper from "./Wrapper";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,10 +15,53 @@ export default function Navbar() {
     },
     {
       label: "Vente d'or",
-      icon: "bx bx-search",
+      
       content: [
         { underLabel: "Option1 ", link: "#" },
         { underLabel: "Option1 ", link: "#" },
+      ],
+    },
+    {
+      label: "Cours de l'or",
+      
+      content: [
+        { underLabel: "Option1 ", link: "#" },
+        { underLabel: "Option1 ", link: "#" },
+      ],
+    },
+    {
+      label: "Actualités",
+      
+      content: [
+        { underLabel: "Option1 ", link: "#" },
+        { underLabel: "Option1 ", link: "#" },
+      ],
+    },
+    {
+      label:  (
+        <span className="flex items-center ">
+          <FaMapMarkerAlt className="ml-2 text-xl" /> {/* Icône avec espace à gauche */}
+          Nos comptoirs
+        </span>
+      ),
+      
+      content: [
+        
+      ],
+    },
+    {
+      label: "Prendre rendez-vous",
+      
+      content: [
+        { underLabel: "Option1 ", link: "#" },
+        { underLabel: "Option1 ", link: "#" },
+      ],
+    },
+    {
+      
+      icon: "bx bx-search",
+      content: [
+        
       ],
     },
   ];
