@@ -1,4 +1,4 @@
-export default function TabCoinCoted() {
+export default function TabCoinCoted({ showButton = 1, header }) {
   const coinCoted = [
     {
       image: "/coin1.jpg",
@@ -24,18 +24,18 @@ export default function TabCoinCoted() {
   ];
   return (
     <>
-      <div className="py-9 px-16">
-        <div className="text-3xl mb-6 ">Pieces Cotées</div>
-        <div className="overflow-x-auto">
+      <div className="py-9 px-2  w-full  ">
+        <div className="text-3xl mb-6 ">{header}</div>
+        <div className="overflow-x-auto w-full">
           <table className="min-w-full   overflow-hidden rounded-t-lg">
             <thead>
               <tr className="bg-[#686868] text-white text-sm leading-normal">
                 <th className="py-3 text-left"></th>
-                <th className="py-3 px-6 text-left">Intitule</th>
-                <th className="py-3 px-6 text-left">Cours</th>
-                <th className="py-3 px-6 text-left">Variation</th>
-                <th className="py-3 px-6 text-left">prime</th>
-                <th className=""></th>
+                <th className="py-3 px-6 text-left ">Intitule</th>
+                <th className="py-3 px-6 text-left w-[12.5%]">Cours</th>
+                <th className="py-3 px-6 text-left w-[12.5%]">Variation</th>
+                <th className="py-3 px-6 text-left w-[12.5%]">prime</th>
+                {showButton == 0 ? "" : <th className=" w-[12.5%]"></th>}
               </tr>
             </thead>
             <tbody className="text-gray-600 text-base font-light">
@@ -52,15 +52,31 @@ export default function TabCoinCoted() {
                     />
                     {item.id}
                   </td>
-                  <td className="w-[540px] px-4 ">{item.title}</td>
+                  <td className=" px-4 ">{item.title}</td>
                   <td className="py-3 px-6">{item.cours}</td>
                   <td className="py-3 px-6">{item.prime}</td>
                   <td className="py-3 px-6">{item.variation}</td>
-                  <td className="py-3 px-2 text-right">
-                    <button className="mx-auto px-9 rounded-lg text-white py-2 bg-slate-500">
-                      Acheter
-                    </button>
-                  </td>
+
+                  {showButton === 0 ? (
+                    ""
+                  ) : showButton === 1 ? (
+                    <td className="py-3 px-2 text-right">
+                      <button className="mx-auto px-9 rounded-lg text-white py-2 bg-slate-500">
+                        Acheter
+                      </button>
+                    </td>
+                  ) : (
+                    <td>
+                      <div className="flex justify-center gap-2">
+                        <button className="px-9 rounded-lg text-white py-2 bg-slate-500">
+                          Acheter
+                        </button>
+                        <button className="px-9 rounded-lg text-white py-2 bg-slate-500">
+                          Acheter
+                        </button>
+                      </div>
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>

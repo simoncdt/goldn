@@ -9,12 +9,16 @@ import VentePiece from "./pages/VentePiece"
 
 import AchatLingot from "./pages/AchatLingot"
 import VenteLingot from "./pages/VenteLingot"
+import RachatBijoux from "./pages/RachatBijoux"
+import CoursOr from './pages/CoursOr'
+import CoursOrModerne from "./pages/CoursOrModerne"
 
 function App() {
 
   return (
     <Router>
     <Routes>
+
       <Route path="/" element={<Home />} />
       <Route path="/faq" element={<Faq />} />
       <Route path="/achat-or" element={<AchatOr />} />
@@ -26,6 +30,13 @@ function App() {
 
       <Route path="/vente-piece-or" element={<VentePiece />} />
       <Route path="/vente-lingot-or" element={<VenteLingot />} />
+
+      <Route path="/rachat-bijoux" element={<RachatBijoux />} />
+      <Route path="/cours-or" element={<CoursOr />} />
+      <Route path="/cours-or-moderne" element={<CoursOrModerne />} />
+
+
+
 
 
       

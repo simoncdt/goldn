@@ -7,6 +7,8 @@ import Faq from "../../components/Faq";
 import TabCoinCoted from "../../components/TabCoinCoted";
 import TabCoinNotCoted from "../../components/TabCoinNotCoted";
 import WhyGold from "../../components/WhyGold";
+import OfferSection from "../../components/OfferSection";
+import HowWork from "./HowWork";
 
 export default function index() {
   return (
@@ -14,11 +16,8 @@ export default function index() {
       <div className="bg-[#FAFAFA] font-serif">
         <Layout>
           <Navbar />
-
-          <Presentation />
-          <TabCoinCoted />
-          <TabCoinNotCoted />
-          <WhyGold/>
+          <OfferSection />
+          <HowWork/>
           <Faq />
           <Footer />
         </Layout>

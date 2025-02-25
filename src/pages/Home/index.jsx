@@ -6,12 +6,13 @@ import Download from "./Download";
 import FindUs from "./FindUs";
 import News from "./News";
 import NewsLetter from "./NewsLetter";
-import OfferSection from "./OfferSection";
+import OfferSection from "../../components/OfferSection";
 import Overview from "../../components/Overview";
 import Places from "./Places";
 import Review from "./ReviewSlider";
 import ShowCase from "../../components/ShowCase";
 import Slider from "./Slider";
+import BuySell from "./BuySell";
 export default function index() {
   return (
     <>
@@ -24,6 +25,7 @@ export default function index() {
           {/* <FindUs /> */}
           <Review />
           <OfferSection />
+          <BuySell/>
           <News />
           <NewsLetter />
           <ShowCase title={"Nos services"} />

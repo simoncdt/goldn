@@ -24,8 +24,8 @@ export default function TabCoinNotCoted() {
   ];
   return (
     <>
-      <div className="py-9 px-16">
-        <div className="text-3xl mb-6 ">Pieces non Cotées</div>
+      <div className="py-9 px-2  w-full">
+        {/* <div className="text-3xl mb-6 ">Pieces non Cotées</div> */}
         <div className="overflow-x-auto">
           <table className="min-w-full   overflow-hidden rounded-t-lg">
             <thead>
