@@ -7,10 +7,10 @@ import FindUs from "./FindUs";
 import News from "./News";
 import NewsLetter from "./NewsLetter";
 import OfferSection from "./OfferSection";
-import Overview from "./Overview";
+import Overview from "../../components/Overview";
 import Places from "./Places";
 import Review from "./ReviewSlider";
-import ShowCase from "./ShowCase";
+import ShowCase from "../../components/ShowCase";
 import Slider from "./Slider";
 export default function index() {
   return (
@@ -25,7 +25,7 @@ export default function index() {
           <Review />
           <OfferSection />
           <News />
-          <NewsLetter/>
+          <NewsLetter />
           <ShowCase title={"Nos services"} />
           <Places />
           {/* <Download /> */}

@@ -1,4 +1,3 @@
-import { space } from "postcss/lib/list";
 import logo from "../assets/logo.png";
 import Input from "../pages/Home/Input";
 import Wrapper from "./Wrapper";

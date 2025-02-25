@@ -1,4 +1,4 @@
-import Wrapper from "../../components/Wrapper";
+import Wrapper from "./Wrapper";
 
 // eslint-disable-next-line react/prop-types
 export default function ShowCase({ title }) {
