@@ -9,33 +9,34 @@ export default function Navbar() {
     {
       label: "Achat d'or",
       content: [
-        { underLabel: "Option1dds ", link: "#" },
-        { underLabel: "Option1dsdds ", link: "#" },
+        { underLabel: "Pièce d'or ", link: "#" },
+        { underLabel: "Lingot d'or ", link: "#" },
+        { underLabel: "Investir dans l'or ", link: "#" },
       ],
     },
     {
       label: "Vente d'or",
       
       content: [
-        { underLabel: "Option1 ", link: "#" },
-        { underLabel: "Option1 ", link: "#" },
+        { underLabel: "Pièce d'or ", link: "#" },
+        { underLabel: "Lingot d'or  ", link: "#" },
+        { underLabel: "Rachat bijoux et montres en Or  ", link: "#" },
+       
       ],
     },
     {
       label: "Cours de l'or",
       
       content: [
-        { underLabel: "Option1 ", link: "#" },
-        { underLabel: "Option1 ", link: "#" },
+        { underLabel: "Pièces côtées ", link: "#" },
+        { underLabel: "Pièces non côtées", link: "#" },
+        { underLabel: "Pièces modernes", link: "#" },
       ],
     },
     {
       label: "Actualités",
       
-      content: [
-        { underLabel: "Option1 ", link: "#" },
-        { underLabel: "Option1 ", link: "#" },
-      ],
+      content: [],
     },
     {
       label:  (
@@ -52,10 +53,9 @@ export default function Navbar() {
     {
       label: "Prendre rendez-vous",
       
-      content: [
-        { underLabel: "Option1 ", link: "#" },
-        { underLabel: "Option1 ", link: "#" },
-      ],
+      content: [],
+        
+      
     },
     {
       
