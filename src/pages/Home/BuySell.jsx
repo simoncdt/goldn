@@ -27,8 +27,7 @@ export default function BuySell() {
             Vendez vos pièces d’Or et lingots d’Or
             </div>
             <div className=" text-center mt-4px-5">
-            Pour vendre de l’Or ou de l’argent, remplissez simplement le formulaire et un de nos conseillers va vous contacte
-            </div>
+            Pour procéder à la vente d’or , veuillez remplir le formulaire. L’un de nos conseillers vous contactera dans les plus brefs délais afin de vous accompagner dans votre démarche.            </div>
             <Button
               text={"Demande de vente  d'Or"}
               className={
