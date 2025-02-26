@@ -6,6 +6,7 @@ import Presentation from "../../components/Presentation";
 import Faq from "../../components/Faq";
 import TabCoinCoted from "../../components/TabCoinCoted";
 import TabCoinNotCoted from "../../components/TabCoinNotCoted";
+import Wrapper from "../../components/Wrapper";
 
 export default function index() {
   return (
@@ -13,10 +14,12 @@ export default function index() {
       <div className="bg-[#FAFAFA] font-serif">
         <Layout>
           <Navbar />
-
-          <Presentation />
-          <TabCoinCoted />
+          <Wrapper>
+          <TabCoinCoted header={"Pièces Cotées"} />
           <TabCoinNotCoted />
+          </Wrapper>
+
+        
           <Faq />
           <Footer />
         </Layout>

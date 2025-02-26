@@ -1,68 +1,73 @@
 import { useState } from "react";
 import logo from "../assets/logo.png";
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt } from "react-icons/fa";
 import Wrapper from "./Wrapper";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navElement = ["FAQ", "Presse", "A propos", "Nous contacter"];
+  const navElement = [
+    { title: "FAQ", link: "faq" },
+    { title: "Presse", link: "faq" },
+    { title: "A propos", link: "faq" },
+    { title: "Nous contacter", link: "faq" },
+  ];
   const menuElement = [
     {
       label: "Achat d'or",
+      link: "/achat-or",
       content: [
-        { underLabel: "Pièce d'or ", link: "#" },
-        { underLabel: "Lingot d'or ", link: "#" },
+        { underLabel: "Pièce d'or ", link: "/achat-piece-or" },
+        { underLabel: "Lingot d'or ", link: "/achat-lingot-or" },
         { underLabel: "Investir dans l'or ", link: "#" },
       ],
     },
     {
       label: "Vente d'or",
-      
+      link: "/vente-or",
+
       content: [
-        { underLabel: "Pièce d'or ", link: "#" },
-        { underLabel: "Lingot d'or  ", link: "#" },
-        { underLabel: "Rachat bijoux et montres en Or  ", link: "#" },
-       
+        { underLabel: "Pièce d'or ", link: "/vente-piece-or" },
+        { underLabel: "Lingot d'or  ", link: "/vente-lingot-or" },
+        {
+          underLabel: "Rachat bijoux et montres en Or  ",
+          link: "/rachat-bijoux",
+        },
       ],
     },
     {
       label: "Cours de l'or",
-      
+      link: "/cours-or",
+
       content: [
-        { underLabel: "Pièces côtées ", link: "#" },
-        { underLabel: "Pièces non côtées", link: "#" },
-        { underLabel: "Pièces modernes", link: "#" },
+        { underLabel: "Pièces côtées ", link: "#pieces-cotees" },
+        { underLabel: "Pièces non côtées", link: "#pieces-non-cotees" },
+        { underLabel: "Pièces modernes", link: "/cours-or-moderne" },
       ],
     },
     {
       label: "Actualités",
-      
+
       content: [],
     },
     {
-      label:  (
+      label: (
         <span className="flex items-center ">
-          <FaMapMarkerAlt className="ml-2 text-xl" /> {/* Icône avec espace à gauche */}
+          <FaMapMarkerAlt className="ml-2 text-xl" />{" "}
+          {/* Icône avec espace à gauche */}
           Nos comptoirs
         </span>
       ),
-      
-      content: [
-        
-      ],
+
+      content: [],
     },
     {
       label: "Prendre rendez-vous",
-      
+
       content: [],
-        
-      
     },
     {
-      
       icon: "bx bx-search",
-      content: [
-        
-      ],
+      content: [],
     },
   ];
   return (
@@ -89,20 +94,20 @@ export default function Navbar() {
         <header className="w-full bg-[#323235]">
           <Wrapper>
             <div className="flex justify-between items-center py-6   drop-shadow-md">
-              <a href="#">
+              <Link to="/">
                 <img
                   src={logo}
                   alt=""
                   className="w-52 hover:scale-105 transition-all"
                 />
-              </a>
+              </Link>
               <ul className="hidden xl:flex items-center gap-4  text-base text-white ">
                 {navElement.map((item, index) => (
                   <li
                     key={index}
                     className="p-3 hover:text-[#A78C4B] rounded-md transition-all"
                   >
-                    {item}
+                    <Link className="w-full" to={item.link}>{item.title}</Link>
                   </li>
                 ))}
 
@@ -147,24 +152,25 @@ export default function Navbar() {
             </div>
             <div className="bg-[#D6BE82] p-0 rounded-t-lg">
               {" "}
-              <ul className="hidden xl:flex   items-stretch  font-semibold text-base relative   ">
+              <ul className={`hidden xl:flex   items-stretch  font-semibold text-base relative `}>
                 {menuElement.map((item, index) => (
                   <li
                     key={index}
-                    className="group relative  flex items-center  justify-center flex-1 p-3 hover:bg-yellow-600 text-center transition-all"
+                    className={`group relative  flex items-center ${index ==0? "rounded-tl-lg" : index +1 ==menuElement.length?"rounded-tr-lg":""}  justify-center flex-1  hover:bg-yellow-600 text-center transition-all`}
                   >
                     <i className={item.icon + " text-2xl "}></i>
 
-                    {item.label}
+                    <Link className="w-full h-full p-3" to={item.link}>{item.label}</Link>
                     {item.content.length > 0 ? (
                       <div className="absolute z-50 left-0 top-full hidden group-hover:flex flex-col bg-white shadow-md p-2 w-full">
                         {item.content.map((secondItem, index) => (
-                          <button
+                          <Link
+                            to={secondItem.link}
                             key={index}
                             className="p-2 hover:bg-gray-200 w-full text-left"
                           >
                             {secondItem.underLabel}
-                          </button>
+                          </Link>
                         ))}
                       </div>
                     ) : (

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import Input from "../pages/Home/Input";
 import Wrapper from "./Wrapper";
@@ -6,10 +7,10 @@ export default function Footer() {
   const socialMedia = ["/instagram-logo-24.png", "/instagram-logo-24.png"];
   const content = [
     { title: "ACHAT ET VENTE OR", content: ["Achat Or", "RAchat Or"] },
-    { title: "ACHAT ET VENTE OR", content: ["Achat Or", "RAchat Or"] },
+    { title: "ACHAT ET VENTE OR2", content: ["Achat Or", "RAchat Or"] },
 
-    { title: "ACHAT ET VENTE OR", content: ["Achat Or", "RAchat Or"] },
-    { title: "ACHAT ET VENTE OR", content: ["Achat Or", "RAchat Or"] },
+    { title: "ACHAT ET VENTE OR3", content: ["Achat Or", "RAchat Or"] },
+    { title: "ACHAT ET VENTE OR4", content: ["Achat Or", "RAchat Or"] },
 
     {
       title: "ACHAT ET VENTE OR",
@@ -53,8 +54,6 @@ export default function Footer() {
   ];
   return (
     <div className="bg-[#343437] text-white">
-      
-      
       <div className="bg-black">
         <Wrapper>
           <div className=" py-7  gap-5 grid grid-cols-12">
@@ -67,7 +66,7 @@ export default function Footer() {
               Leader français de lAchat dOr et de la Vente dOr Plus de 70
               agences dans toute la France
             </div>
-            <div className="col-span-3"> 
+            <div className="col-span-3">
               <div className="  rounded-lg w-fit flex bg-[#4A4A4B] hover:bg-green-800 col-span-3 ">
                 <div className="rounded-lg bg-green-800 px-4 py-2 ">
                   No Vert{" "}
@@ -90,7 +89,9 @@ export default function Footer() {
                 className="mb-10 px-4"
               >
                 <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2">
-                  <a href="">{item.title}</a>
+                  <Link className="hover:text-[#D6BE82] transition">
+                    {item.title}
+                  </Link>
                 </div>
                 <ul className="text-base ml-4">
                   {item.content.map((item, index) => (
@@ -98,14 +99,17 @@ export default function Footer() {
                       key={index}
                       className="py-2"
                     >
-                      {item}
+                      <Link className="hover:text-[#D6BE82] transition">
+                        {item}
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
-            ))}
+            ))}{" "}
+            {/* 2er partie */}
             <div className=" bg-[#2A2A2C] rounded-lg py-5 px-4">
-              <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2">
+              <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2 hover:text-[#D6BE82] transition">
                 <a href="">Comptoir National de LOR</a>
               </div>
               <ul className="text-base ml-4">
@@ -114,15 +118,34 @@ export default function Footer() {
                     key={index}
                     className="py-2"
                   >
-                    {item.title}
+                    <Link className="hover:text-[#D6BE82] transition">
+                      {item.title}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="mx-4 pl-4 "><span className=""><i className='bx bx-right-arrow '></i></span>Tous nos lingots dor</div>
-            <div className="mx-4">Tous nos lingots dor</div>
+            <div className="mx-4 pl-4  ">
+              <Link className="hover:text-[#D6BE82] transition">
+                {" "}
+                <span className="">
+                  <i className="bx bx-right-arrow "></i>
+                </span>
+                Tous nos lingots dor
+              </Link>
+            </div>
+            <div className="mx-4 ">
+              {" "}
+              <Link className="hover:text-[#D6BE82] transition">
+                {" "}
+                <span className="">
+                  <i className="bx bx-right-arrow "></i>
+                </span>
+                Tous nos pieces dor
+              </Link>
+            </div>
             <div className=" px-4">
-              <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2">
+              <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2 hover:text-[#D6BE82] transition">
                 <a href="">AUTRES METAUX PRECIEUX</a>
               </div>
               <ul className="text-base ml-4">
@@ -131,14 +154,16 @@ export default function Footer() {
                     key={index}
                     className="py-2"
                   >
-                    {item.title}
+                    <Link className="hover:text-[#D6BE82] transition">
+                      {item.title}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="px-4 ">
-              <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2">
-                <a href="">NOS DERNIERES NEWS</a>
+              <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2 hover:text-[#D6BE82] transition">
+                <Link href="">NOS DERNIERES NEWS</Link>
               </div>
               <ul className="text-base ">
                 {link[2].map((item, index) => (
@@ -146,13 +171,16 @@ export default function Footer() {
                     key={index}
                     className="py-2"
                   >
-                    {item.title}
+                    {" "}
+                    <Link className="hover:text-[#D6BE82] transition">
+                      {item.title}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-          <div className="grid grid-cols-2 mt-24">
+          <div className="grid grid-cols-2 mt-24 pl-96">
             <div className="flex items-center">
               {socialMedia.map((item, index) => (
                 <img
@@ -167,7 +195,7 @@ export default function Footer() {
               <div className="flex mb-4">
                 <div>
                   <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2">
-                    <a href="">NEWSLETTER</a>
+                    NEWSLETTER
                   </div>
                   <div className="max-w-48 text-xs">
                     Indiquez votre adresse email pour recevoir notre lettre
@@ -198,7 +226,7 @@ export default function Footer() {
           </div>
         </div>
       </Wrapper>
-{/*Last sectionnn */}
+      {/*Last sectionnn */}
       <div className=" bg-black">
         <Wrapper>
           <div className="mx-3">

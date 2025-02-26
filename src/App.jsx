@@ -12,11 +12,13 @@ import VenteLingot from "./pages/VenteLingot"
 import RachatBijoux from "./pages/RachatBijoux"
 import CoursOr from './pages/CoursOr'
 import CoursOrModerne from "./pages/CoursOrModerne"
+import ScrollToHashElement from "./components/ScrollToHashElement";
 
 function App() {
 
   return (
     <Router>
+      <ScrollToHashElement/>
     <Routes>
 
       <Route path="/" element={<Home />} />

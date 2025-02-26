@@ -71,7 +71,7 @@ export default function CoinSlider() {
           {coinItem.map((item, index) => (
             <SwiperSlide
               key={index}
-              className="flex flex-col text-center pt-5 my-16 rounded-lg overflow-hidden shadow-lg flex-grow"
+              className="flex flex-col group transition text-center pt-5 my-16 border hover:border-[#8F7130] rounded-lg overflow-hidden shadow-lg flex-grow"
             >
               <div className="text-sm mb-8">{item.name}</div>
               <div className="text-base">
@@ -89,7 +89,7 @@ export default function CoinSlider() {
               >
                 {item.percent}
               </span>
-              <div className="bg-[#F2F4F7] mt-4 py-4 font-semibold text-xs text-black border-white border-2">
+              <div className="bg-[#F2F4F7]  mt-4 py-4 font-semibold text-xs text-black border-white group-hover:border-[#8F7130] group-hover:text-white border-2 group-hover:bg-[#8F7130]">
                 CONSULTER
               </div>
             </SwiperSlide>

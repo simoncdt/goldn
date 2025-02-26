@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Faq() {
   const faqList = [
     {
@@ -40,10 +42,14 @@ export default function Faq() {
             {faqList.map((item, index) => (
               <li
                 key={index}
-                className="border-b-2 border-[#B3B3B4] py-4"
+                className="border-b-2 border-[#B3B3B4] py-4 group "
               >
-                <div className="text-xl mb-3">{item.title}</div>
-                <div className="text-sm text-[#B3B3B4]"> {item.content}</div>
+                <Link>
+                  <div className="text-xl mb-3 group-hover:text-[#A78C4B] transition">
+                    {item.title}
+                  </div>
+                  <div className="text-sm text-[#B3B3B4]"> {item.content}</div>
+                </Link>
               </li>
             ))}
           </ul>

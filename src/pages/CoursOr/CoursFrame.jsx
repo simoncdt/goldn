@@ -34,7 +34,7 @@ export default function CoursFrame({
             <div className="text-center text-base">{presentation}</div>
           </div>
           <div>
-            <div className="text-3xl mb-6 ">{tabTitle1}</div>
+            <div className="text-3xl mb-6 " id="pieces-cotees">{tabTitle1}</div>
             <div className="block xl:flex ">
               <TabCoinCoted showButton={showButton} />
               <TabCoinCoted showButton={showButton} />{" "}
@@ -43,7 +43,7 @@ export default function CoursFrame({
 
           {showNonCoted ? (
             <div>
-              <div className="text-3xl mb-6 ">{tabTitle2}</div>
+              <div className="text-3xl mb-6 " id="pieces-non-cotees">{tabTitle2}</div>
               <div className="block xl:flex ">
                 <TabCoinNotCoted /> <TabCoinNotCoted />
               </div>
