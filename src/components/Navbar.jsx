@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navElement = [
-    { title: "FAQ", link: "faq" },
-    { title: "Presse", link: "faq" },
-    { title: "A propos", link: "faq" },
-    { title: "Nous contacter", link: "faq" },
+    { title: "FAQ", link: "/faq" },
+    { title: "Presse", link: "/faq" },
+    { title: "A propos", link: "/faq" },
+    { title: "Nous contacter", link: "/contact" },
   ];
   const menuElement = [
     {
@@ -120,9 +120,9 @@ export default function Navbar() {
                   </div>
                 </li>
                 <li className="  hover:text-[##A78C4B] rounded-lg transition-all">
-                  <button className="px-6 rounded-lg bg-white hover:bg-[#A78C4B] hover:text-white py-2 text-black">
+                  <Link to={"/account"} className="px-6 rounded-lg bg-white hover:bg-[#A78C4B] hover:text-white py-2 text-black">
                     Connexion
-                  </button>
+                  </Link>
                 </li>
               </ul>
               <i

@@ -13,10 +13,19 @@ import Review from "./ReviewSlider";
 import ShowCase from "../../components/ShowCase";
 import Slider from "./Slider";
 import BuySell from "./BuySell";
-export default function index() {
+import { useEffect, useState } from "react";
+import Popup from "../../components/PopUp";
+export default function Index() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  useEffect(() => {
+    setIsPopupOpen(true); // Afficher le popup au chargement
+  }, []);
+
   return (
     <>
       <div className="bg-[#FAFAFA] font-serif">
+        <Popup />
         <Layout>
           <Navbar />
           <Slider />
@@ -25,7 +34,7 @@ export default function index() {
           {/* <FindUs /> */}
           <Review />
           <OfferSection />
-          <BuySell/>
+          <BuySell />
           {/* <News /> */}
           <NewsLetter />
           <ShowCase title={"Nos services"} />
