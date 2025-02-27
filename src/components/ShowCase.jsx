@@ -1,4 +1,6 @@
 import Wrapper from "./Wrapper";
+import { Eye } from "lucide-react";
+import { FaUsers, FaRegHandPeace } from "react-icons/fa";
 
 // eslint-disable-next-line react/prop-types
 export default function ShowCase({ title }) {
@@ -48,6 +50,10 @@ export default function ShowCase({ title }) {
   );
   const showCaseItem = [
     { icon: shopIcon, content: "70 points de vente en France " },
+    { icon: <Eye size={43} color="#d0b476" />, content: "Estimation gratuite sans engagement " },
+    { icon: <FaUsers size={43} color="#d0b476" />, content: "Service client de qualité" },
+  { icon: <FaRegHandPeace size={43} color="#d0b476" />, content: "100% satisfaction garantie" },
+    
   ];
   return (
     <>

@@ -116,7 +116,7 @@ export default function Navbar() {
                     <div className="rounded-lg bg-green-800 px-4 py-2 ">
                       No Vert{" "}
                     </div>{" "}
-                    <div className="px-4 py-2 ">99-88-88-88</div>{" "}
+                    <div className="px-4 py-2 ">00-00-00-00</div>{" "}
                   </div>
                 </li>
                 <li className="  hover:text-[##A78C4B] rounded-lg transition-all">
