@@ -17,12 +17,21 @@ import { useRef } from "react";
 export default function Slider() {
   const information = [
     {
+      head: "Investir dans l'Or",
+      content:
+        "<b>Vendre de l'or</b> et tous les metaux precieux argent paltin plladium sous toutes ses forms bijoux en or or dentaire debris dor et or industrie",
+      button: "Investir dans l'Or",
+      link:"./achat-or"
+    },
+    {
       head: "Rachat de votre Or",
       content:
         "<b>Vendre de l'or</b> et tous les metaux precieux argent paltin plladium sous toutes ses forms bijoux en or or dentaire debris dor et or industrie",
       button: "Ventre D'or",
+      link:"./vente-or"
+
     },
-    {},
+    
   ];
     const swiperRef = useRef(null);
   
@@ -49,20 +58,19 @@ export default function Slider() {
               className="py-12 border "
             >
               <div className=" ml-8 max-w-lg ">
-                <div className="border-b-8 w-fit border-yellow-400 pb-3 font-semibold text-3xl">
+                <div className="border-b-8 w-fit border-[#C9A34F] pb-3 font-semibold text-3xl">
                   {item.head}{" "}
                 </div>
                 <div
                   className="mt-12 mb-16 text-[21px] text-left"
                   dangerouslySetInnerHTML={{ __html: item.content }}
                 />
-                <Button text={item.button} className={" bg-[#5A3C31] hover:bg-[#D6BE82]"} />
+                <Button link={item.link} text={item.button} className={" bg-[#5A3C31] hover:bg-[#D6BE82]"} />
                
               </div>
             </SwiperSlide>
           ))}
 
-          <SwiperSlide>Slide 2</SwiperSlide>
         </Swiper>{" "}
         <button
               onClick={() => swiperRef.current.swiper.slidePrev()}

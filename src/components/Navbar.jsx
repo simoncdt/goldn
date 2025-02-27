@@ -18,7 +18,7 @@ export default function Navbar() {
       content: [
         { underLabel: "Pièce d'or ", link: "/achat-piece-or" },
         { underLabel: "Lingot d'or ", link: "/achat-lingot-or" },
-        { underLabel: "Investir dans l'or ", link: "#" },
+        { underLabel: "Investir dans l'or ", link: "/investir-or" },
       ],
     },
     {
@@ -51,7 +51,7 @@ export default function Navbar() {
     },
     {
       label: (
-        <span className="flex items-center ">
+        <span className="flex items-center justify-center ">
           <FaMapMarkerAlt className="ml-2 text-xl" />{" "}
           {/* Icône avec espace à gauche */}
           Nos comptoirs
@@ -61,7 +61,7 @@ export default function Navbar() {
       content: [],
     },
     {
-      label: "Prendre rendez-vous",
+      label: "Prendre RDV",
 
       content: [],
     },
@@ -107,7 +107,12 @@ export default function Navbar() {
                     key={index}
                     className="p-3 hover:text-[#A78C4B] rounded-md transition-all"
                   >
-                    <Link className="w-full" to={item.link}>{item.title}</Link>
+                    <Link
+                      className="w-full"
+                      to={item.link}
+                    >
+                      {item.title}
+                    </Link>
                   </li>
                 ))}
 
@@ -120,7 +125,10 @@ export default function Navbar() {
                   </div>
                 </li>
                 <li className="  hover:text-[##A78C4B] rounded-lg transition-all">
-                  <Link to={"/account"} className="px-6 rounded-lg bg-white hover:bg-[#A78C4B] hover:text-white py-2 text-black">
+                  <Link
+                    to={"/account"}
+                    className="px-6 rounded-lg bg-white hover:bg-[#A78C4B] hover:text-white py-2 text-black"
+                  >
                     Connexion
                   </Link>
                 </li>
@@ -152,15 +160,28 @@ export default function Navbar() {
             </div>
             <div className="bg-[#D6BE82] p-0 rounded-t-lg">
               {" "}
-              <ul className={`hidden xl:flex   items-stretch  font-semibold text-base relative `}>
+              <ul
+                className={`hidden xl:flex   items-stretch  font- text-base relative `}
+              >
                 {menuElement.map((item, index) => (
                   <li
                     key={index}
-                    className={`group relative  flex items-center ${index ==0? "rounded-tl-lg" : index +1 ==menuElement.length?"rounded-tr-lg":""}  justify-center flex-1  hover:bg-yellow-600 text-center transition-all`}
+                    className={`group relative  flex items-center ${
+                      index == 0
+                        ? "rounded-tl-lg"
+                        : index + 1 == menuElement.length
+                        ? "rounded-tr-lg"
+                        : ""
+                    }  justify-center flex-1  hover:bg-yellow-600 text-center transition-all`}
                   >
                     <i className={item.icon + " text-2xl "}></i>
 
-                    <Link className="w-full h-full p-3" to={item.link}>{item.label}</Link>
+                    <Link
+                      className=" px-3 py-2"
+                      to={item.link}
+                    >
+                      {item.label}
+                    </Link>
                     {item.content.length > 0 ? (
                       <div className="absolute z-50 left-0 top-full hidden group-hover:flex flex-col bg-white shadow-md p-2 w-full">
                         {item.content.map((secondItem, index) => (

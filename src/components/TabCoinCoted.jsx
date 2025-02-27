@@ -1,4 +1,5 @@
-export default function TabCoinCoted({ showButton = 1, header }) {
+/* eslint-disable react/prop-types */
+export default function TabCoinCoted({ showButton = 1, header,button }) {
   const coinCoted = [
     {
       image: "/coin1.jpg",
@@ -27,7 +28,7 @@ export default function TabCoinCoted({ showButton = 1, header }) {
       <div className="py-9 px-2  w-full  ">
         <div className="text-3xl mb-6 ">{header}</div>
         <div className="overflow-x-auto w-full">
-          <table className="min-w-full   overflow-hidden rounded-t-lg">
+          <table className="min-w-full border- border-black  overflow-hidden rounded-t-lg">
             <thead>
               <tr className="bg-[#686868] text-white text-sm leading-normal">
                 <th className="py-3 text-left"></th>
@@ -60,9 +61,9 @@ export default function TabCoinCoted({ showButton = 1, header }) {
                   {showButton === 0 ? (
                     ""
                   ) : showButton === 1 ? (
-                    <td className="py-3 px-2 text-right">
+                    <td className="py-3 px-2 text-right border-r-2">
                       <button className="mx-auto px-9 rounded-lg text-white py-2 bg-slate-500">
-                        Acheter
+                        {button || "Acheter"}
                       </button>
                     </td>
                   ) : (
@@ -72,7 +73,7 @@ export default function TabCoinCoted({ showButton = 1, header }) {
                           Acheter
                         </button>
                         <button className="px-9 rounded-lg text-white py-2 bg-slate-500">
-                          Acheter
+                          Vendre
                         </button>
                       </div>
                     </td>

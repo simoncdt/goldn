@@ -12,6 +12,8 @@ import AchatPiece from "./pages/AchatPiece"
 import VentePiece from "./pages/VentePiece"
 
 import AchatLingot from "./pages/AchatLingot"
+import InvestirOr from "./pages/InvestirOr"
+
 import VenteLingot from "./pages/VenteLingot"
 import RachatBijoux from "./pages/RachatBijoux"
 import CoursOr from './pages/CoursOr'
@@ -36,6 +38,7 @@ function App() {
 
       <Route path="/achat-piece-or" element={<AchatPiece />} />
       <Route path="/achat-lingot-or" element={<AchatLingot />} />
+      <Route path="/investir-or" element={<InvestirOr />} />
 
       <Route path="/vente-or" element={<VenteOr/>} />
 
