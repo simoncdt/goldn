@@ -57,15 +57,15 @@ export default function Slider() {
               key={index}
               className="py-12 border "
             >
-              <div className=" ml-8 max-w-lg ">
-                <div className="border-b-8 w-fit border-[#C9A34F] pb-3 font-semibold text-3xl">
+              <div className=" ml-4 md:ml-8 max-w-lg ">
+                <div className="border-b-8 w-fit border-[#C9A34F] pb-3 font-semibold text-2xl xl:text-3xl">
                   {item.head}{" "}
                 </div>
                 <div
                   className="mt-12 mb-16 text-[21px] text-left"
                   dangerouslySetInnerHTML={{ __html: item.content }}
                 />
-                <Button link={item.link} text={item.button} className={" bg-[#5A3C31] hover:bg-[#D6BE82]"} />
+                <Button link={item.link} text={item.button} className={" bg-[#5A3C31] hover:bg-[#D6BE82] block w-fit "} />
                
               </div>
             </SwiperSlide>

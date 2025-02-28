@@ -67,7 +67,7 @@ export default function Places() {
     "Valence",
   ];
   return (
-    <div className="px-16 py-20 bg-white ">
+    <div className="md:px-16 py-20 bg-white ">
       <Wrapper>
         <div className="text-center mb-16">
           <div className="text-3xl mb-5">
@@ -83,7 +83,7 @@ export default function Places() {
             et sans engagement.
           </div>
         </div>
-        <div className="grid grid-cols-4 text-center text-lg gap-y-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 text-center text-lg gap-y-5">
           {city.map((item, index) => (
             <div
               key={index}

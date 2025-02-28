@@ -59,7 +59,7 @@ export default function ShowCase({ title }) {
             ""
           )}
 
-          <div className="grid grid-cols-4">
+          <div className="grid md:grid-cols-4">
             {showCaseItem.map((item, index) => (
               <div
                 key={index}

@@ -40,11 +40,11 @@ export default function index() {
           <Overview />
           <ShowCase title={"Charte qualite"} />
           <div className="bg-[#D6BE82] text-center py-16 ">
-            <div className="text-3xl mb-5">
+            <div className="text-2xl md:text-3xl mb-5 font-semibold">
               {" "}
               Achetez vos pieces DOR et lingots DOR en ligne
             </div>
-            <div className="max-w-3xl mx-auto mb-16">
+            <div className="max-w-3xl mx-4 md:mx-auto mb-16">
               Pour acheter de l’Or, remplissez simplement le formulaire de
               commande en ligne et un de nos conseillers va vous contacter pour
               expliquer les démarches à suivre. La procédure se fait en moins de

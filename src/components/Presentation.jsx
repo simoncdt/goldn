@@ -6,15 +6,15 @@ export default function Presentation({ presentationInfo }) {
   return (
     <>
       <Wrapper>
-        <div className="grid grid-cols-12 bg-[#F2F4F7]">
-          <div className="col-span-7 px-12 py-16">
-            <div className="text-3xl mb-5">
+        <div className="grid xl:grid-cols-12 bg-[#F2F4F7]">
+          <div className="col-span-7 px-4 md:px-12 py-16">
+            <div className="text-2xl  md:text-3xl mb-5">
               {" "}
               <strong>{presentationInfo.title}</strong>
             </div>
             <div>{presentationInfo.content}</div>
             {presentationInfo.button ? (
-              <div className="mt-16 mb-7">
+              <div className="mt-16 md:mb-7">
                 <Button
                   link={presentationInfo.link}
                   text={presentationInfo.button}

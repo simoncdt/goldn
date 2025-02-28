@@ -293,9 +293,9 @@ export default function index() {
           <Navbar />
 
           <Presentation presentationInfo={presentationInfo} />
-          <div>
+          <div className="mb-20 md:mb-0">
             <Wrapper>
-              <div className="text-3xl font-semibold">
+              <div className="text-2xl md:text-3xl font-semibold">
                 Comment investir dans l’Or physique ?
               </div>
               <div>
@@ -303,13 +303,13 @@ export default function index() {
                   <>
                     <div
                       key={index}
-                      className="flex mt-10"
+                      className="md:flex mt-10"
                     >
                       <span className="text-4xl box-border block font-bold leading-[1em] w-16 h-16 pt-3 text-center border border-black rounded-[50%]  mr-10  ">
                         {index + 1}
                       </span>
                       <div className="w-full ">
-                        <div className="text-3xl font-semibold my-4">
+                        <div className="text-2xl md:text-3xl font-semibold my-4">
                           {item.title}
                         </div>
                         {index == 1 ? (

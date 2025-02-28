@@ -12,7 +12,7 @@ export default function Overview() {
   return (
     <>
       <div className="block  w-full py-12">
-        <div className="text-center text-3xl font-semibold py-12">
+        <div className="text-center text-2xl md:text-3xl px-5 font-semibold py-12">
           Cours du lingot et des pieces dOr et dargent
         </div>
         <div className="bg-[#343437] w-full ">

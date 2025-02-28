@@ -35,8 +35,8 @@ export default function index() {
           <Navbar />
 
           <Presentation presentationInfo={presentationInfo} />
-          <TabCoinCoted />
-          <TabCoinNotCoted />
+          <TabCoinCoted header={"Pièces Cotées"}/>
+          <TabCoinNotCoted header={"Pièces non Cotées"} />
           <WhyGold />
           <Faq />
           <Footer />

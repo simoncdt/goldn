@@ -3,11 +3,11 @@ export default function WhyGold() {
   return (
     <>
       <div className="my-9">
-        <div className="text-3xl font-semibold px-16  my-5">
+        <div className="text-3xl font-semibold px-5 md:px-16  my-5">
           Pourquoi Investir dans les pieces dor?
         </div>
-        <div className="px-16">
-          <ul>
+        <div className=" px-5 md:px-16">
+          <ul> 
             <li className="py-4">
               <div className="text-xl mb-3 py-5">
                 L’achat de pièces d’or est un choix pertinent pour diversifier
@@ -52,8 +52,8 @@ export default function WhyGold() {
             </li>
           </ul>
         </div>
-        <div className="text-3xl font-semibold px-16  my-5">Quelles pieces dor acheter</div>
-        <div className="px-16">
+        <div className="text-3xl font-semibold px-5 md:px-16  my-5">Quelles pieces dor acheter</div>
+        <div className="px-5 md:px-16 ">
           <div className="text-xl mb-3 py-5">
             L’achat de pièces d’or est un choix pertinent pour diversifier son
             épargne. À poids égal, toutes les pièces ne se valent pas. Un
@@ -94,10 +94,10 @@ export default function WhyGold() {
             frappe se décline en once, ½ once, ¼ d’once et 1/10 d’once.
           </div>
         </div>
-        <div className="text-3xl font-semibold px-16  my-5">
+        <div className="text-3xl font-semibold px-5 md:px-16   my-5">
           Quelles pièces sont éligibles à linvestissement?
         </div>
-        <div className="px-16">
+        <div className="px-5 md:px-16 ">
           <div className="text-xl mb-3 py-5">
             Si vous souhaitez diversifier votre épargne, mettez-vous dans la
             peau dun investisseur. Vos priorités devront différer de celle dun

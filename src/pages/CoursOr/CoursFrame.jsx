@@ -34,10 +34,10 @@ export default function CoursFrame({
             <div className="text-center text-base">{presentation}</div>
           </div>
 
-          <div className="px-16">
+          <div className="md:px-16 mx-2">
             <div>
               <div
-                className="text-3xl mb-6 font-semibold"
+                className="text-2xl md:text-3xl mb-6 font-semibold"
                 id="pieces-cotees"
               >
                 {tabTitle1}
@@ -51,7 +51,7 @@ export default function CoursFrame({
             {showNonCoted ? (
               <div>
                 <div
-                  className="text-3xl mb-6 "
+                  className="text-2xl md:text-3xl mb-6 font-semibold"
                   id="pieces-non-cotees"
                 >
                   {tabTitle2}
@@ -64,8 +64,8 @@ export default function CoursFrame({
               ""
             )}
             <div className="">{children}</div>
-            <div className="p-12">
-              <div className=" flex flex-col text-3xl items-center font-semibold m-7">
+            <div className="md:p-12">
+              <div className=" flex flex-col text-2xl text-center md:text-3xl items-center font-semibold m-7">
                 Vous voulez Vendre ou Acheter de l’Or ?
                 <span>Vous avez besoin de conseils ?</span>
               </div>
@@ -83,16 +83,16 @@ export default function CoursFrame({
                   milliers de clients nous font confiance, faites comme eux !
                 </p>
               </div>
-              <div className="text-center mt-14">
+              <div className="text-center flex mt-14 px-2">
                 <Button
                 link={"/achat-or"}
                   text={"Achetez de lOr"}
-                  className={"bg-red-400 mr-5"}
+                  className={"bg-red-400 mr-5 block md:flex w-full md:w-fit mb-2"}
                 />
                 <Button
                 link={"/vente-or"}
                   text={"Vendez votre Or"}
-                  className={"bg-red-400"}
+                  className={"bg-red-400 block w-full md:flex md:w-fit "}
                 />
               </div>
             </div>
