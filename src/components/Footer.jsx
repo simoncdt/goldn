@@ -2,33 +2,38 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import Input from "../pages/Home/Input";
 import Wrapper from "./Wrapper";
+import { Linkedin, Facebook, Phone, Instagram } from "lucide-react";
 
 export default function Footer() {
-  const socialMedia = ["/instagram-logo-24.png", "/instagram-logo-24.png"];
+ 
   const content = [
-    { title: "ACHAT ET VENTE OR", content: ["Achat Or", "RAchat Or"] },
-    { title: "ACHAT ET VENTE OR2", content: ["Achat Or", "RAchat Or"] },
+    { title: "ACHAT ET VENTE OR", content: ["Achat Or", "RAchat Or", "Rachat bijoux Or","Rachat montres Or",] },
+    { title: "Lingots d'Or", content: ["Lingot d'Or 1kg", "Lingotin d'Or 500g","Lingotin d'Or 250g","Lingotin d'Or 100g","Lingotin d'Or 50g","Lingotin d'Or 20g","Lingotin d'Or 10g"] },
 
-    { title: "ACHAT ET VENTE OR3", content: ["Achat Or", "RAchat Or"] },
-    { title: "ACHAT ET VENTE OR4", content: ["Achat Or", "RAchat Or"] },
+    { title: "PIECES D'OR", content: ["Napoléon 20 Frs (Louis d'Or)", "Croix Suisse 20 Frs Or (Vrenelli)","Souverain George V Or","50 Pesos Or","Krugerrand Or","Union Latine Or","Demi Napoléon Or"] },
+    { title: "Cours de l'Or et de l'Argent", content: ["Cours de l'or", "Pièces de collection","Pièces modernes"] },
 
     {
-      title: "ACHAT ET VENTE OR",
+      title: "Actualité de l'Or",
       content: [
-        "Achat Or",
+        "Fiscalité Or",
+        "Presse",
+        "FAQ/Guide",
+        "Tout savoir sur l'Achat d'Or",
+        "Tout savoir sur le Lingot d'Or",
         <span
           key="catalogue"
           className="rounded-lg bg-yellow-700 px-4 py-3"
         >
-          notre catalogue
+          Notre catalogue
         </span>,
       ],
     },
   ];
 
   const link = [
-    [{ title: "A propos" }, { title: "A propos" }],
-    [{ title: "A propos" }, { title: "A propos" }],
+    [{ title: "A propos" }, { title: "Prendre RDV" }, { title: "Contactez-nous" },{ title: "Recrutement" }],
+    [ ],
     [
       {
         title: (
@@ -181,16 +186,29 @@ export default function Footer() {
             </div>
           </div>
           <div className="grid xl:grid-cols-2 xlmt-24 xl:pl-96">
-            <div className="flex items-center justify-center xl:justify-normal t p-10">
-              {socialMedia.map((item, index) => (
-                <img
-                  key={index}
-                  src={item}
-                  alt=""
-                  className="w-12 h-12 "
-                />
-              ))}
-            </div>
+          <div className="flex items-center justify-center xl:justify-normal p-10 space-x-4">
+  
+
+  {/* Icône LinkedIn */}
+  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+    <Linkedin size={48} className="text-blue-700 hover:text-blue-900" />
+  </a>
+
+  {/* Icône Facebook */}
+  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+    <Facebook size={48} className="text-blue-600 hover:text-blue-800" />
+  </a>
+
+  {/* Icône WhatsApp */}
+  <a href="https://wa.me/votrenumero" target="_blank" rel="noopener noreferrer">
+    <Phone size={48} className="text-green-500 hover:text-green-700" />
+  </a>
+
+  {/* Icône Instagram */}
+  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+    <Instagram size={48} className="text-pink-500 hover:text-pink-700" />
+  </a>
+</div>
             <div className=" px-3">
               <div className="xl:flex mb-4 ">
                 <div>
