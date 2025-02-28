@@ -6,7 +6,7 @@ export default function PriceCard() {
     { product: "Once OR,Nyc", value: "2806.20", percent: "+0,25%" },
   ];
   return (
-    <div className="absolute top-12 right-8 z-10 pointer-events-none">
+    <div className="hidden md:block absolute top-12 right-8 z-10 pointer-events-none">
       <div className="w-72 border bg-black bg-opacity-50 rounded-lg text-[15px] text-white p-4">
         <div className="mb-4 cursor-pointer hover:text-yellow-400 ">
           {" "}

@@ -4,7 +4,7 @@ export default function SignUpForm() {
   return (
     <form
       action=""
-      className="bg-[#F2F4F7] py-12 px-12 rounded-lg shadow-md my-16"
+      className="bg-[#F2F4F7] py-5 px-3 md:px-12 rounded-lg shadow-md my-16"
     >
       <div className="text-center text-3xl font-semibold mb-6">
         Nouveau compte

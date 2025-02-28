@@ -4,10 +4,10 @@ import Input from "./Input";
 export default function NewsLetter() {
   return (
     <>
-      <div className=" bg-[#343437] w-full  text-white pt-14 px-10 pb-10">
+      <div className=" bg-[#343437] w-full  text-white pt-14 md:px-10 pb-10">
         <Wrapper>
           <div className="flex flex-col items-center">
-            <div className="text-3xl mb-5">
+            <div className="text-2xl font-medium  md:text-3xl mb-5">
               Recevez gratuitment un de nos livres blancs
             </div>
             <div className="text-center mb-8">

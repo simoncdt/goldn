@@ -37,7 +37,7 @@ export default function Faq() {
     <>
       <div className="my-9">
         <div className="text-3xl text-center mb-5">FAQ</div>
-        <div className="px-16">
+        <div className="px-5 md:px-16">
           <ul>
             {faqList.map((item, index) => (
               <li

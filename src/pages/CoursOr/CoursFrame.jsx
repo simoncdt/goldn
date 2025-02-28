@@ -33,55 +33,71 @@ export default function CoursFrame({
             </div>
             <div className="text-center text-base">{presentation}</div>
           </div>
-          <div>
-            <div className="text-3xl mb-6 " id="pieces-cotees">{tabTitle1}</div>
-            <div className="block xl:flex ">
-              <TabCoinCoted showButton={showButton} />
-              <TabCoinCoted showButton={showButton} />{" "}
+
+          <div className="md:px-16 mx-2">
+            <div>
+              <div
+                className="text-2xl md:text-3xl mb-6 font-semibold"
+                id="pieces-cotees"
+              >
+                {tabTitle1}
+              </div>
+              <div className="block xl:flex ">
+                <TabCoinCoted showButton={showButton} />
+                <TabCoinCoted showButton={showButton} />{" "}
+              </div>
+            </div>
+
+            {showNonCoted ? (
+              <div>
+                <div
+                  className="text-2xl md:text-3xl mb-6 font-semibold"
+                  id="pieces-non-cotees"
+                >
+                  {tabTitle2}
+                </div>
+                <div className="block xl:flex ">
+                  <TabCoinNotCoted /> <TabCoinNotCoted />
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+            <div className="">{children}</div>
+            <div className="md:p-12">
+              <div className=" flex flex-col text-2xl text-center md:text-3xl items-center font-semibold m-7">
+                Vous voulez Vendre ou Acheter de l’Or ?
+                <span>Vous avez besoin de conseils ?</span>
+              </div>
+              <div className="text-center  flex flex-col text-xl ">
+                Le Comptoir National de l’Or, professionels de l’Or depuis 1976,
+                est le spécialiste de lachat et de la vente dOr sous toutes ses
+                formes.
+                <span className="mt-4">
+                  {" "}
+                  Achetez ou vendez votre Or en ligne ou dans l’une de nos
+                  agences proche de chez vous.
+                </span>
+                <p className=" mt-9 text-base">
+                  Nous vous conseillons gratuitement en toute discrétion. Des
+                  milliers de clients nous font confiance, faites comme eux !
+                </p>
+              </div>
+              <div className="text-center flex mt-14 px-2">
+                <Button
+                link={"/achat-or"}
+                  text={"Achetez de lOr"}
+                  className={"bg-red-400 mr-5 block md:flex w-full md:w-fit mb-2"}
+                />
+                <Button
+                link={"/vente-or"}
+                  text={"Vendez votre Or"}
+                  className={"bg-red-400 block w-full md:flex md:w-fit "}
+                />
+              </div>
             </div>
           </div>
 
-          {showNonCoted ? (
-            <div>
-              <div className="text-3xl mb-6 " id="pieces-non-cotees">{tabTitle2}</div>
-              <div className="block xl:flex ">
-                <TabCoinNotCoted /> <TabCoinNotCoted />
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
-          <div className="">{children}</div>
-          <div className="p-12">
-            <div className=" flex flex-col text-3xl items-center font-semibold m-7">
-              Vous voulez Vendre ou Acheter de l’Or ?
-              <span>Vous avez besoin de conseils ?</span>
-            </div>
-            <div className="text-center  flex flex-col text-xl ">
-              Le Comptoir National de l’Or, professionels de l’Or depuis 1976,
-              est le spécialiste de lachat et de la vente dOr sous toutes ses
-              formes.
-              <span className="mt-4">
-                {" "}
-                Achetez ou vendez votre Or en ligne ou dans l’une de nos agences
-                proche de chez vous.
-              </span>
-              <p className=" mt-9 text-base">
-                Nous vous conseillons gratuitement en toute discrétion. Des
-                milliers de clients nous font confiance, faites comme eux !
-              </p>
-            </div>
-            <div className="text-center mt-14">
-              <Button
-                text={"Achetez de lOr"}
-                className={"bg-red-400 mr-5"}
-              />
-              <Button
-                text={"Achetez de lOr"}
-                className={"bg-red-400"}
-              />
-            </div>
-          </div>
           <ShowCase title={"Charte qualite"} />
 
           <Faq />

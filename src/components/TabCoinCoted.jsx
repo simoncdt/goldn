@@ -1,4 +1,5 @@
-export default function TabCoinCoted({ showButton = 1, header }) {
+/* eslint-disable react/prop-types */
+export default function TabCoinCoted({ showButton = 1, header, button }) {
   const coinCoted = [
     {
       image: "/coin1.jpg",
@@ -27,52 +28,63 @@ export default function TabCoinCoted({ showButton = 1, header }) {
       <div className="py-9 px-2  w-full  ">
         <div className="text-3xl mb-6 ">{header}</div>
         <div className="overflow-x-auto w-full">
-          <table className="min-w-full   overflow-hidden rounded-t-lg">
+          <table className="min-w-full border- text-[11px] md:text-sm table-fixed w-full border-black  overflow-hidden rounded-t-lg">
             <thead>
-              <tr className="bg-[#686868] text-white text-sm leading-normal">
-                <th className="py-3 text-left"></th>
-                <th className="py-3 px-6 text-left ">Intitule</th>
-                <th className="py-3 px-6 text-left w-[12.5%]">Cours</th>
-                <th className="py-3 px-6 text-left w-[12.5%]">Variation</th>
-                <th className="py-3 px-6 text-left w-[12.5%]">prime</th>
-                {showButton == 0 ? "" : <th className=" w-[12.5%]"></th>}
+              <tr className="bg-[#686868] text-white leading-normal">
+                <th className="py-3 text-left xs:w-[64px] sm:w-[90px] "></th>
+                <th className="py-3 md:px-6 text-left ">Intitule</th>
+                <th className="py-3 md:px-6 text-left md:w-[12.5%]">Cours</th>
+                <th className="py-3 md:px-6 text-left md:w-[12.5%]">
+                  {" "}
+                  <span className="md:hidden">Var.</span>
+                  <span className="hidden md:block">Variation</span>
+                </th>
+                <th className="py-3 md:px-6 text-left md:w-[12.5%]">
+                  <span className="md:hidden">Prime</span>
+                  <span className="hidden md:block">Prime</span>
+                </th>
+                {showButton == 0 ? (
+                  ""
+                ) : (
+                  <th className="hidden md:table-cell "></th>
+                )}
               </tr>
             </thead>
-            <tbody className="text-gray-600 text-base font-light">
+            <tbody className="text-gray-600  font-light">
               {coinCoted.map((item) => (
                 <tr
                   key={item.id}
                   className="border-b border-l border-gray-200 bg-[#FAFAFA] hover:bg-gray-100"
                 >
-                  <td className="w-[90px]  h-24 bg-white p-2">
+                  <td className="bg-white p-2  ">
                     <img
-                      className="w-16 h-16 mx-auto"
+                      className=" aspect-square "
                       src={item.image}
                       alt=""
                     />
                     {item.id}
                   </td>
                   <td className=" px-4 ">{item.title}</td>
-                  <td className="py-3 px-6">{item.cours}</td>
-                  <td className="py-3 px-6">{item.prime}</td>
-                  <td className="py-3 px-6">{item.variation}</td>
+                  <td className="md:py-3 md:px-6">{item.cours}</td>
+                  <td className="md:py-3 md:px-6">{item.prime}</td>
+                  <td className="md:py-3 md:px-6">{item.variation}</td>
 
                   {showButton === 0 ? (
                     ""
                   ) : showButton === 1 ? (
-                    <td className="py-3 px-2 text-right">
+                    <td className="hidden md:block py-3 px-2 text-right border-r-2">
                       <button className="mx-auto px-9 rounded-lg text-white py-2 bg-slate-500">
-                        Acheter
+                        {button || "Acheter"}
                       </button>
                     </td>
                   ) : (
-                    <td>
-                      <div className="flex justify-center gap-2">
-                        <button className="px-9 rounded-lg text-white py-2 bg-slate-500">
+                    <td className="hidden md:block py-3 px-2 text-right border-r-2">
+                      <div className="3xl:flex justify-center ">
+                        <button className="px-9 rounded-lg text-white py-2 mb-1 3xl:mb-0 bg-slate-500 ">
                           Acheter
                         </button>
-                        <button className="px-9 rounded-lg text-white py-2 bg-slate-500">
-                          Acheter
+                        <button className="px-9 rounded-lg text-white py-2 bg-slate-500 ml-2">
+                          Vendre
                         </button>
                       </div>
                     </td>

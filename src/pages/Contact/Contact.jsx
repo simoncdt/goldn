@@ -36,7 +36,7 @@ export default function Contact() {
       ];
   return (
     <><div className="mt-16">
-    <div className="text-4xl pb-8   border-black w-fit ">Contact</div>
+    <div className="  text-2xl    md:text-4xl pb-8   border-black w-fit ">Contact</div>
     <div className="my-12 text-[15px]">
       <div>
         Vous avez des questions ? Vous avez besoin de conseils ?<br />
@@ -51,14 +51,14 @@ export default function Contact() {
             {infoList.map((item, index) => (
               <li
                 key={index}
-                className="flex gap-4 items-center py-2"
+                className="md:flex gap-4 items-center py-2"
               >
                 <span className="flex items-center gap-2 leading-none">
                   <i className="bx bxs-right-arrow text-[#D6BE82] text-lg leading-none"></i>
                   {item.title}
                 </span>
 
-                <span className="flex items-center  text-[#D6BE82] leading-none">
+                <span className="flex items-center ml-5 md:ml-0 text-[#D6BE82] leading-none">
                   <i className="bx bx-chevron-right text-lg leading-none"></i>
                   <Link className="">{item.content}</Link>
                 </span>
@@ -72,7 +72,7 @@ export default function Contact() {
             {contactList.map((item, index) => (
               <li
                 key={index}
-                className=" py-2 flex items-start"
+                className=" py-2 grid grid-cols-2 md:flex items-start"
               >
                 <span className="flex items-center gap-2 leading-none w-40">
                   <i className="bx bxs-right-arrow text-[#D6BE82] text-lg leading-none"></i>

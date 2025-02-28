@@ -7,7 +7,26 @@ import Faq from "../../components/Faq";
 import TabCoinCoted from "../../components/TabCoinCoted";
 import TabCoinNotCoted from "../../components/TabCoinNotCoted";
 import WhyGold from "../../components/WhyGold";
-
+const presentationInfo = {
+  title: " Achetez Piece Or",
+  content: (
+    <div>
+      <strong></strong>
+      <strong>Le Comptoir National de l’Or</strong> , professionnels de l’Or
+      depuis 1976 vous propose d’acheter votre Or (pièces, lingot et lingotins
+      en or) au juste prix dans nos Comptoirs partout en France. Pour connaître
+      le prix de lor du jour, consultez son cours en ligne.
+      <br /> Nous vous conseillons
+      <strong> gratuitement en toute discrétion</strong>
+      gratuitement en toute discrétion avec ou sans rendez-vous.
+      <br />
+      <br /> Le Comptoir National de l’Or vous accueille dans l’un de ses
+      comptoirs en France
+    </div>
+  ),
+  button: "Se faire conseiller",
+  link: "/contact",
+};
 export default function index() {
   return (
     <>
@@ -15,10 +34,10 @@ export default function index() {
         <Layout>
           <Navbar />
 
-          <Presentation />
-          <TabCoinCoted />
-          <TabCoinNotCoted />
-          <WhyGold/>
+          <Presentation presentationInfo={presentationInfo} />
+          <TabCoinCoted header={"Pièces Cotées"}/>
+          <TabCoinNotCoted header={"Pièces non Cotées"} />
+          <WhyGold />
           <Faq />
           <Footer />
         </Layout>

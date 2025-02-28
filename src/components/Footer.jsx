@@ -56,37 +56,37 @@ export default function Footer() {
     <div className="bg-[#343437] text-white">
       <div className="bg-black">
         <Wrapper>
-          <div className=" py-7  gap-5 grid grid-cols-12">
+          <div className=" py-7 text-center gap-5 grid xl:grid-cols-12">
             <img
               src={logo}
               alt=""
-              className="col-span-4"
+              className="xl:col-span-4 col-span-2 "
             />
-            <div className="text-xl px-9 col-span-5">
+            <div className="mdtext-xl text-base md:px-9 col-span-5">
               Leader français de lAchat dOr et de la Vente dOr Plus de 70
               agences dans toute la France
             </div>
-            <div className="col-span-3">
+            {/* <div className="col-span-3">
               <div className="  rounded-lg w-fit flex bg-[#4A4A4B] hover:bg-green-800 col-span-3 ">
                 <div className="rounded-lg bg-green-800 px-4 py-2 ">
                   No Vert{" "}
                 </div>{" "}
                 <div className="px-4 py-2 ">99-88-88-88</div>{" "}
               </div>
-            </div>
+            </div> */}
           </div>
         </Wrapper>
       </div>
 
       {/* Deuxieme partie */}
       <Wrapper>
-        <div className="my-12 pl-10">
+        <div className="my-12 xl:pl-10">
           {/* 1er partie */}
-          <div className=" grid grid-cols-5 gap-2">
+          <div className=" grid xl:grid-cols-5 gap-2">
             {content.map((item, index) => (
               <div
                 key={index}
-                className="mb-10 px-4"
+                className="mb-10 xl:px-4"
               >
                 <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2">
                   <Link className="hover:text-[#D6BE82] transition">
@@ -180,8 +180,8 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="grid grid-cols-2 mt-24 pl-96">
-            <div className="flex items-center">
+          <div className="grid xl:grid-cols-2 xlmt-24 xl:pl-96">
+            <div className="flex items-center justify-center xl:justify-normal t p-10">
               {socialMedia.map((item, index) => (
                 <img
                   key={index}
@@ -192,12 +192,12 @@ export default function Footer() {
               ))}
             </div>
             <div className=" px-3">
-              <div className="flex mb-4">
+              <div className="xl:flex mb-4 ">
                 <div>
                   <div className="border-l-4 border-yellow-400 text-lg mb-3 font-semibold pl-2">
                     NEWSLETTER
                   </div>
-                  <div className="max-w-48 text-xs">
+                  <div className="xl:max-w-48 text-xs mb-5">
                     Indiquez votre adresse email pour recevoir notre lettre
                     dinformation
                   </div>

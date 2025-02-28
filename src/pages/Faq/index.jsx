@@ -29,16 +29,16 @@ export default function index() {
               <div className="text-4xl pb-8  border-b-4 border-black w-fit ">
                 FAQ
               </div>
-              <div className="my-12 grid grid-cols-2 gap-5">
+              <div className="my-12 grid md:grid-cols-2 gap-5">
                 {faqList.map((item, index) => (
                   <div key={index} className="border">
-                    <div className="flex ">
+                    <div className=" md:flex  ">
                       <img
                         src={item.img}
                         alt=""
-                        className="w-[225px] h-[225px]"
+                        className="w-[225px] h-[225px] block mx-auto"
                       />
-                      <div className="m-6 ">
+                      <div className="md:m-6 mx-3 my-6">
                         <div className="text-lg mb-5">
                           {item.title}
                         </div>

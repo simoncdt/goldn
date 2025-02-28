@@ -6,7 +6,7 @@ export default function Input({placeholder,textButton,width}) {
     <>
       <form
         action=""
-        className={`relative flex-grow ${width? `w-[${width}]` :   "w-[540px]"}`}
+        className={`relative flex-grow ${width? `w-[${width}]` :   " xl:w-[540px]"}`}
         onSubmit={(e) => {
           e.preventDefault();
         }}
