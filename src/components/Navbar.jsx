@@ -3,12 +3,15 @@ import logo from "../assets/logo.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Wrapper from "./Wrapper";
 import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navElement = [
     { title: "FAQ", link: "/faq" },
     { title: "Presse", link: "/faq" },
-    { title: "A propos", link: "/faq" },
+    { title: "À propos", link: "/faq" },
     { title: "Nous contacter", link: "/contact" },
   ];
   const menuElement = [
@@ -16,194 +19,133 @@ export default function Navbar() {
       label: "Achat d'or",
       link: "/achat-or",
       content: [
-        { underLabel: "Pièce d'or ", link: "/achat-piece-or" },
-        { underLabel: "Lingot d'or ", link: "/achat-lingot-or" },
-        { underLabel: "Investir dans l'or ", link: "/investir-or" },
+        { underLabel: "Pièce d'or", link: "/achat-piece-or" },
+        { underLabel: "Lingot d'or", link: "/achat-lingot-or" },
+        { underLabel: "Investir dans l'or", link: "/investir-or" },
       ],
     },
     {
       label: "Vente d'or",
       link: "/vente-or",
-
       content: [
-        { underLabel: "Pièce d'or ", link: "/vente-piece-or" },
-        { underLabel: "Lingot d'or  ", link: "/vente-lingot-or" },
-        {
-          underLabel: "Rachat bijoux et montres en Or  ",
-          link: "/rachat-bijoux",
-        },
+        { underLabel: "Pièce d'or", link: "/vente-piece-or" },
+        { underLabel: "Lingot d'or", link: "/vente-lingot-or" },
+        { underLabel: "Rachat bijoux et montres en or", link: "/rachat-bijoux" },
       ],
     },
     {
       label: "Cours de l'or",
       link: "/cours-or",
-
       content: [
-        { underLabel: "Pièces côtées ", link: "#pieces-cotees" },
-        { underLabel: "Pièces non côtées", link: "#pieces-non-cotees" },
+        { underLabel: "Pièces cotées", link: "#pieces-cotees" },
+        { underLabel: "Pièces non cotées", link: "#pieces-non-cotees" },
         { underLabel: "Pièces modernes", link: "/cours-or-moderne" },
       ],
     },
     {
       label: "Actualités",
-
       content: [],
     },
     {
       label: (
-        <span className="flex items-center justify-center ">
-          <FaMapMarkerAlt className="ml-2 text-xl" />{" "}
-          {/* Icône avec espace à gauche */}
-          Nos comptoirs
+        <span className="flex items-center justify-center">
+          <FaMapMarkerAlt className="ml-2 text-xl text-gold" /> Nos comptoirs
         </span>
       ),
-
       content: [],
     },
     {
       label: "Prendre RDV",
-
       content: [],
     },
     {
-      icon: "bx bx-search",
+      label: "Recherche",
+      icon: (
+        <span className="flex items-center justify-center">
+          <FaSearch className="ml-2 text-white text-xl" />
+        </span>
+      ),
       content: [],
-    },
+    }
+    
+    
+
   ];
+
   return (
-    <>
-      <div className=" w-full">
-        <div className="w-full  bg-black">
-          <Wrapper>
-            <div className=" grid grid-cols-4 text-white">
-              <div>
-                PLATINE 942.76 $ <span className="text-red-500">0.47%</span>
-              </div>
-              <div>
-                OR 2942.76 $ <span className="text-red-500">0.47%</span>
-              </div>
-              <div>
-                Argent 2942.76 $ <span className="text-red-500">0.47%</span>
-              </div>
-              <div>
-                PALLADIUM 2942.76 $ <span className="text-red-500">0.47%</span>
-              </div>
-            </div>
-          </Wrapper>
-        </div>
-        <header className="w-full bg-[#323235]">
-          <Wrapper>
-            <div className="flex justify-between items-center py-6   drop-shadow-md">
-              <Link to="/">
-                <img
-                  src={logo}
-                  alt=""
-                  className="w-52 hover:scale-105 transition-all"
-                />
-              </Link>
-              <ul className="hidden xl:flex items-center gap-4  text-base text-white ">
-                {navElement.map((item, index) => (
-                  <li
-                    key={index}
-                    className="p-3 hover:text-[#A78C4B] rounded-md transition-all"
-                  >
-                    <Link
-                      className="w-full"
-                      to={item.link}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-
-                <li className="p-3  hover:text-[##A78C4B] rounded-md transition-all ">
-                  <div className="  rounded-lg  flex bg-[#4A4A4B] hover:bg-green-800 ">
-                    <div className="rounded-lg bg-green-800 px-4 py-2 ">
-                      No Vert{" "}
-                    </div>{" "}
-                    <div className="px-4 py-2 ">00-00-00-00</div>{" "}
-                  </div>
-                </li>
-                <li className="  hover:text-[##A78C4B] rounded-lg transition-all">
-                  <Link
-                    to={"/account"}
-                    className="px-6 rounded-lg bg-white hover:bg-[#A78C4B] hover:text-white py-2 text-black"
-                  >
-                    Connexion
-                  </Link>
-                </li>
-              </ul>
-              <i
-                className="bx bx-menu xl:hidden block text-5xl cursor-pointer"
-                onClick={() => {
-                  setIsMenuOpen(!isMenuOpen);
-                }}
-              ></i>
-              <div
-                className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${
-                  isMenuOpen ? "opacity-100" : "opacity-0"
-                }`}
-                style={{
-                  transition: "transform 0.3s ease, opacity 0.3s ease ",
-                }}
-              >
-                <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer ">
-                  Faq
-                </li>
-                <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer ">
-                  Presse
-                </li>
-                <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer ">
-                  Nous contacter
-                </li>
-              </div>
-            </div>
-            <div className="bg-[#D6BE82] p-0 rounded-t-lg">
-              {" "}
-              <ul
-                className={`hidden xl:flex   items-stretch  font- text-base relative `}
-              >
-                {menuElement.map((item, index) => (
-                  <li
-                    key={index}
-                    className={`group relative  flex items-center ${
-                      index == 0
-                        ? "rounded-tl-lg"
-                        : index + 1 == menuElement.length
-                        ? "rounded-tr-lg"
-                        : ""
-                    }  justify-center flex-1  hover:bg-yellow-600 text-center transition-all`}
-                  >
-                    <i className={item.icon + " text-2xl "}></i>
-
-                    <Link
-                      className=" px-3 py-2"
-                      to={item.link}
-                    >
-                      {item.label}
-                    </Link>
-                    {item.content.length > 0 ? (
-                      <div className="absolute z-50 left-0 top-full hidden group-hover:flex flex-col bg-white shadow-md p-2 w-full">
-                        {item.content.map((secondItem, index) => (
-                          <Link
-                            to={secondItem.link}
-                            key={index}
-                            className="p-2 hover:bg-gray-200 w-full text-left"
-                          >
-                            {secondItem.underLabel}
-                          </Link>
-                        ))}
-                      </div>
-                    ) : (
-                      ""
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Wrapper>
-        </header>
+    <div className="w-full">
+      {/* Barre des métaux précieux */}
+      <div className="w-full bg-black text-gold p-2">
+        <Wrapper>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-center font-semibold text-sm md:text-base">
+            <div className="min-w-[120px]">PLATINE <span className="text-white">942.76 $</span> <span className="text-red-500">-0.47%</span></div>
+            <div className="min-w-[120px]">OR <span className="text-white">2942.76 $</span> <span className="text-red-500">-0.47%</span></div>
+            <div className="min-w-[120px]">ARGENT <span className="text-white">2942.76 $</span> <span className="text-red-500">-0.47%</span></div>
+            <div className="min-w-[120px]">PALLADIUM <span className="text-white">2942.76 $</span> <span className="text-red-500">-0.47%</span></div>
+          </div>
+        </Wrapper>
       </div>
-    </>
+
+      {/* Navbar principale */}
+      <header className="w-full bg-[#1A1A1A] shadow-md">
+        <Wrapper>
+          <div className="flex justify-between items-center py-6">
+            <Link to="/">
+              <img src={logo} alt="Logo" className="w-52 hover:scale-110 transition-transform" />
+            </Link>
+            <ul className="hidden xl:flex items-center gap-6 text-base text-white">
+              {navElement.map((item, index) => (
+                <li key={index} className="p-3 hover:text-gold transition-all">
+                  <Link to={item.link}>{item.title}</Link>
+                </li>
+              ))}
+              <li className="p-3">
+                <div className="flex items-center bg-[#4A4A4B] hover:bg-gold transition-colors rounded-lg">
+                  <div className="bg-gold text-black px-4 py-2 rounded-l-lg">No Vert</div>
+                  <div className="px-4 py-2">00-00-00-00</div>
+                </div>
+              </li>
+              <li>
+                <Link to="/account" className="px-6 py-2 rounded-lg bg-gold text-white hover:bg-[#A67C00] transition-all">
+                  Connexion
+                </Link>
+              </li>
+            </ul>
+            <i className="bx bx-menu xl:hidden block text-5xl cursor-pointer text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}></i>
+          </div>
+
+          {/* Menu mobile */}
+          <div
+            className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 text-lg transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
+          >
+            {navElement.map((item, index) => (
+              <li key={index} className="list-none w-full text-center p-4 hover:bg-gold hover:text-black transition-all cursor-pointer">
+                {item.title}
+              </li>
+            ))}
+          </div>
+        </Wrapper>
+
+        {/* Menu secondaire */}
+        <div className="bg-gradient-to-r from-[#D4AF37] to-[#A67C00] p-0 rounded-t-lg">
+          <ul className="hidden xl:flex items-stretch text-base font-medium">
+            {menuElement.map((item, index) => (
+              <li key={index} className={`group relative flex-1 text-center hover:bg-[#FFD700] transition-all py-2 ${index === 0 ? "rounded-tl-lg" : index === menuElement.length - 1 ? "rounded-tr-lg" : ""}`}>
+                <Link to={item.link} className="block px-3">{item.label}</Link>
+                {item.content.length > 0 && (
+                  <div className="absolute z-50 left-0 top-full hidden group-hover:flex flex-col bg-white shadow-md p-2 w-full">
+                    {item.content.map((secondItem, i) => (
+                      <Link key={i} to={secondItem.link} className="p-2 hover:bg-gray-200 w-full text-left">
+                        {secondItem.underLabel}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </header>
+    </div>
   );
 }

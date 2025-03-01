@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Faq() {
+  const [openIndex, setOpenIndex] = useState(null);
+
   const faqList = [
     {
       title: "Comment investir dans l'or",
@@ -10,7 +13,7 @@ export default function Faq() {
     {
       title: "Tout ce qu'il faut savoir sur les Pièces d'Or",
       content:
-        "Les pièces d’or ont une forte liquidité (notamment en comparaison au lingot d’or). Elles sont fractionnables et sont donc susceptibles d’être échangées par plus petites quantités. Par ailleurs, une pièce d’or aura plus de chance de trouver un acheteur potentiel qu’un lingot qui exigera de l’acheteur en question un plus gros investissement",
+        "Les pièces d’or ont une forte liquidité (notamment en comparaison au lingot d’or). Elles sont fractionnables et sont donc susceptibles d’être échangées par plus petites quantités. Par ailleurs, une pièce d’or aura plus de chance de trouver un acheteur potentiel qu’un lingot qui exigera de l’acheteur en question un plus gros investissement.",
     },
     {
       title: "Pourquoi investir dans l'or ?",
@@ -33,28 +36,38 @@ export default function Faq() {
         "Le meilleur moment pour acheter de l’or est souvent en période de baisse des prix, lorsque les marchés financiers sont stables. Il est conseillé d’observer les tendances économiques et d’investir progressivement pour lisser les fluctuations. L’or étant un placement de long terme, la patience est essentielle pour en tirer le meilleur rendement.",
     },
   ];
+
+  const toggleFaq = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <>
-      <div className="my-9">
-        <div className="text-3xl text-center mb-5">FAQ</div>
-        <div className="px-5 md:px-16">
-          <ul>
-            {faqList.map((item, index) => (
-              <li
-                key={index}
-                className="border-b-2 border-[#B3B3B4] py-4 group "
-              >
-                <Link>
-                  <div className="text-xl mb-3 group-hover:text-[#A78C4B] transition">
-                    {item.title}
-                  </div>
-                  <div className="text-sm text-[#B3B3B4]"> {item.content}</div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div className="my-12 max-w-3xl mx-auto px-5">
+      <h2 className="text-4xl font-semibold text-center text-[#A78C4B] mb-8">
+        FAQ
+      </h2>
+      <div className="bg-white shadow-lg rounded-xl border border-[#C9A46C]">
+        {faqList.map((item, index) => (
+          <div key={index} className="border-b last:border-none">
+            <button
+              onClick={() => toggleFaq(index)}
+              className="w-full flex justify-between items-center py-4 px-6 text-lg font-medium text-[#4B3B2B] hover:text-[#A78C4B] transition-all"
+            >
+              {item.title}
+              {openIndex === index ? (
+                <ChevronUp size={24} className="text-[#A78C4B]" />
+              ) : (
+                <ChevronDown size={24} className="text-[#4B3B2B]" />
+              )}
+            </button>
+            {openIndex === index && (
+              <div className="px-6 pb-4 text-[#5A4634] text-md transition-all duration-300">
+                {item.content}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }

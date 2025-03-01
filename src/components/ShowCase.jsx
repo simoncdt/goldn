@@ -23,7 +23,7 @@ export default function ShowCase({ title }) {
         transform="translate(-9 -7)"
       >
         <path
-          d="M13.135 12.85l35.41-.01v-1.52a4.33 4.33 0 0 0-1.261-3.055C46.505 7.485 45.422 7 44.24 7h-27.5c-1.18 0-2.263.485-3.042 1.267a4.33 4.33 0 0 0-1.261 3.055v1.528zm-4.133 9.382c-.01-.1.01-.198.045-.297l-.027-.01 2.925-7.674h37.02l2.988 7.656c.036.1.054.207.045.314v.063a4.88 4.88 0 0 1-1.422 3.451c-.877.88-2.093 1.43-3.435 1.43s-2.56-.548-3.435-1.43c-.277-.28-.52-.584-.725-.926-.206.332-.447.647-.725.926-.877.88-2.093 1.43-3.435 1.43s-2.56-.548-3.435-1.43a4.86 4.86 0 0 1-.725-.926c-.206.332-.447.647-.725.926-.877.88-2.093 1.43-3.435 1.43s-2.56-.548-3.435-1.43a4.86 4.86 0 0 1-.725-.926c-.206.332-.447.647-.725.926-.877.88-2.093 1.43-3.435 1.43s-2.56-.548-3.435-1.43a4.86 4.86 0 0 1-.725-.926 5.16 5.16 0 0 1-.725.926c-.877.88-2.093 1.43-3.435 1.43s-2.56-.548-3.435-1.43a4.88 4.88 0 0 1-1.422-3.451z"
+          d="M13.135 12.85l35.41-.01v-1.52a4.33 4.33 0 0 0-1.261-3.055C46.505 7.485 45.422 7 44.24 7h-27.5c-1.18 0-2.263.485-3.042 1.267a4.33 4.33 0 0 0-1.261 3.055v1.528zm-4.133 9.382c-.01-.1.01-.198.045-.297l-.027-.01 2.925-7.674h37.02l2.988 7.656c.036.1.054.207.045.314v.063a4.88 4.88 0 0 1-1.422 3.451c-.877.88-2.093 1.43-3.435 1.43s-2.56-.548-3.435-1.43c-.277-.28-.52-.584-.725-.926-.206.332-.447.647-.725.926-.877.88-2.093 1.43-3.435 1.43s-2.56-.548-3.435-1.43a4.86 4.86 0 0 1-.725-.926c-.206.332-.447.647-.725.926-.877.88-2.093 1.43-3.435 1.43s-2.56-.548-3.435-1.43a4.86 4.86 0 0 1-.725-.926c-.206.332-.447.647-.725.926-.877.88-2.093 1.43-3.435 1.43s-2.56-.548-3.435-1.43a4.88 4.88 0 0 1-1.422-3.451z"
           fill="#d0b476"
           fillRule="evenodd"
         ></path>
@@ -48,31 +48,32 @@ export default function ShowCase({ title }) {
       </g>
     </svg>
   );
+  
   const showCaseItem = [
     { icon: shopIcon, content: "70 points de vente en France " },
     { icon: <Eye size={43} color="#d0b476" />, content: "Estimation gratuite sans engagement " },
     { icon: <FaUsers size={43} color="#d0b476" />, content: "Service client de qualité" },
-  { icon: <FaRegHandPeace size={43} color="#d0b476" />, content: "100% satisfaction garantie" },
-    
+    { icon: <FaRegHandPeace size={43} color="#d0b476" />, content: "100% satisfaction garantie" },
   ];
+
   return (
     <>
-      <div className="w-full bg-[#7d7d7d33B]">
+      <div className="w-full bg-[#f4f4f4] py-10">
         <Wrapper>
           {title ? (
-            <div className="text-center text-3xl pt-14">{title}</div>
+            <div className="text-center text-4xl font-semibold text-[#d0b476] pb-8">{title}</div>
           ) : (
             ""
           )}
 
-          <div className="grid md:grid-cols-4">
+          <div className="grid md:grid-cols-4 gap-10">
             {showCaseItem.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center p-16 gap-4 "
+                className="flex flex-col items-center justify-center p-8 gap-4 bg-[#ffffff] rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out"
               >
                 {item.icon}
-                <div className="w-36 text-center font-bold text-lg">
+                <div className="w-36 text-center font-bold text-xl text-[#333333]">
                   {item.content}
                 </div>
               </div>
