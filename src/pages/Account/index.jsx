@@ -20,7 +20,7 @@ export default function index() {
 
           <Wrapper>
             <div>
-              <div className="text-3xl md:my-8">Connexion</div>
+              <div className="text-3xl md:my-8"></div>
               <div className="grid md:grid-cols-2 md:gap-8">
                 <LogInForm />
                 <SignUpForm/>

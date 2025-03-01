@@ -7,41 +7,57 @@ import Faq from "../../components/Faq";
 import TabCoinCoted from "../../components/TabCoinCoted";
 import TabCoinNotCoted from "../../components/TabCoinNotCoted";
 import WhyGold from "../../components/WhyGold";
+
 const presentationInfo = {
-  title: " Achetez Piece Or",
+  title: "Achetez des Pièces d'Or",
   content: (
-    <div>
-      <strong></strong>
-      <strong>Le Comptoir National de l’Or</strong> , professionnels de l’Or
-      depuis 1976 vous propose d’acheter votre Or (pièces, lingot et lingotins
-      en or) au juste prix dans nos Comptoirs partout en France. Pour connaître
-      le prix de lor du jour, consultez son cours en ligne.
-      <br /> Nous vous conseillons
-      <strong> gratuitement en toute discrétion</strong>
-      gratuitement en toute discrétion avec ou sans rendez-vous.
+    <div className="text-base leading-normal text-gray-800 max-w-4xl">
+      <strong className="text-black">Le Comptoir National de l’Or</strong>, professionnels de l’or depuis 1976, vous propose d’acheter votre or (pièces, lingots et lingotins) au juste prix dans nos Comptoirs partout en France.  
       <br />
-      <br /> Le Comptoir National de l’Or vous accueille dans l’un de ses
-      comptoirs en France
+      Pour connaître le <span className="font-semibold text-black">prix de l’or du jour</span>, consultez son cours en ligne.
+      <br />
+      Nous vous conseillons <span className="font-semibold">gratuitement et en toute discrétion</span>, avec ou sans rendez-vous.
+      <br />
+      <span className="font-semibold">Le Comptoir National de l’Or</span> vous accueille dans l’un de ses comptoirs en France.
     </div>
   ),
   button: "Se faire conseiller",
   link: "/contact",
 };
-export default function index() {
-  return (
-    <>
-      <div className="bg-[#FAFAFA] font-serif">
-        <Layout>
-          <Navbar />
 
+export default function Index() {
+  return (
+    <div className="bg-[#FAFAFA] text-gray-900 font-sans">
+      <Layout>
+        <Navbar />
+
+        {/* Présentation */}
+        <section className="container mx-auto px-4 md:px-6 py-6">
           <Presentation presentationInfo={presentationInfo} />
-          <TabCoinCoted header={"Pièces Cotées"}/>
-          <TabCoinNotCoted header={"Pièces non Cotées"} />
+        </section>
+
+        {/* Sections avec cartes */}
+        <section className="container mx-auto px-4 md:px-6 py-6">
+          <TabCoinCoted header="Pièces Cotées" />
+        </section>
+
+        <section className="container mx-auto px-4 md:px-6 py-6">
+          <TabCoinNotCoted header="Pièces non Cotées" />
+        </section>
+
+        {/* Explication sur l'or */}
+        <section className="container mx-auto px-4 md:px-6 py-6">
           <WhyGold />
+        </section>
+
+        {/* FAQ */}
+        <section className="container mx-auto px-4 md:px-6 py-6">
           <Faq />
-          <Footer />
-        </Layout>
-      </div>
-    </>
+        </section>
+
+        {/* Footer */}
+        <Footer />
+      </Layout>
+    </div>
   );
 }

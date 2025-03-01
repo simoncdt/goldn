@@ -20,7 +20,7 @@ export default function SignUpForm() {
       {/* Champ Adresse email */}
       <input
         type="text"
-        placeholder="Adresse email "
+        placeholder="Adresse email"
         className="border w-full px-4 py-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#8F7130]"
       />
 
@@ -40,7 +40,7 @@ export default function SignUpForm() {
 
       {/* Cases à cocher */}
       <div className="flex flex-col gap-2 mb-6">
-        <label className="flex  gap-2 text-sm">
+        <label className="flex gap-2 text-sm">
           <input
             type="checkbox"
             className="accent-[#8F7130] w-5 h-5"
