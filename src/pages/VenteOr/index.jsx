@@ -54,6 +54,7 @@ export default function index() {
               afin de vous accompagner dans votre démarche.
             </div>
             <Button
+            link={'/achat-or'}
               text={"Demande d'Achat d'Or"}
               className={"bg-slate-800"}
             />
