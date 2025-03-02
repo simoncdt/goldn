@@ -6,7 +6,7 @@ export default function Faq() {
 
   const faqList = [
     {
-      title: "Comment investir dans l'or",
+      title: "Comment investir dans l'or ?",
       content:
         "Valeur refuge, performance, diversification de votre portefeuille, autant de raisons d’investir dans le métal jaune.",
     },
@@ -42,26 +42,26 @@ export default function Faq() {
   };
 
   return (
-    <div className="my-12 max-w-3xl mx-auto px-5">
-      <h2 className="text-4xl font-semibold text-center text-[#A78C4B] mb-8">
+    <div className="py-16 max-w-6xl mx-auto px-10">
+      <h2 className="text-5xl font-semibold text-center text-[#A78C4B] mb-10">
         FAQ
       </h2>
-      <div className="bg-white shadow-lg rounded-xl border border-[#C9A46C]">
+      <div className="bg-white shadow-xl rounded-2xl border border-[#C9A46C] p-6">
         {faqList.map((item, index) => (
           <div key={index} className="border-b last:border-none">
             <button
               onClick={() => toggleFaq(index)}
-              className="w-full flex justify-between items-center py-4 px-6 text-lg font-medium text-[#4B3B2B] hover:text-[#A78C4B] transition-all"
+              className="w-full flex justify-between items-center py-5 px-10 text-xl font-medium text-[#4B3B2B] hover:text-[#A78C4B] transition-all"
             >
               {item.title}
               {openIndex === index ? (
-                <ChevronUp size={24} className="text-[#A78C4B]" />
+                <ChevronUp size={28} className="text-[#A78C4B]" />
               ) : (
-                <ChevronDown size={24} className="text-[#4B3B2B]" />
+                <ChevronDown size={28} className="text-[#4B3B2B]" />
               )}
             </button>
             {openIndex === index && (
-              <div className="px-6 pb-4 text-[#5A4634] text-md transition-all duration-300">
+              <div className="px-10 pb-5 text-[#5A4634] text-lg transition-all duration-300">
                 {item.content}
               </div>
             )}

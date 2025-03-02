@@ -4,8 +4,28 @@ import Wrapper from "./Wrapper";
 export default function OfferSection() {
   const offersItem = [
     {
-      image: "/coin1.jpg",
+      image: "/s.png",
       name: "Bagues",
+      content: "Rachat et vente de bijoux",
+    },
+    {
+      image: "/u.png",
+      name: "Colliers",
+      content: "Rachat et expertise de bijoux en Or",
+    },
+    {
+      image: "/v.png",
+      name: "Bracelets",
+      content: "Rachat de vos boucles d'oreilles en Or ",
+    },
+    {
+      image: "/m.png",
+      name: "Boucles d'oreille",
+      content: "Rachat de vos broches en or",
+    },
+    {
+      image: "/x.png",
+      name: "Broche",
       content: "Rachat et vente de bijoux",
     },
   ];
