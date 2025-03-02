@@ -18,28 +18,33 @@ export default function CoinSlider() {
       image: "/coin1.jpg",
       value: "523.92 $",
       percent: "+ 0.24 %",
+      link: "https://www.aucoffre.com/cours/categorie-supertype/graphique-cotation-5?utm_source=chatgpt.com", // lien vers le cours de la Croix Suisse 20frs
     },
     {
       name: "Maple Leaf (Canada)",
       image: "/z.png",
       value: "3 168,51 $",
       percent: " -10,02%",
+      link: "https://www.cours-or.ch/or/pieces-d-or/maple-leaf-canada/?utm_source=chatgpt.com", // lien vers le cours de la Maple Leaf
     },
     {
       name: "Krugerrand (Afrique du Sud)",
       image: "/k.png",
       value: "3 168,51 $",
       percent: "-10,59%",
+      link: "https://www.changevivienne.com/or/pieces-d-or-d-investissement/krugerrand?utm_source=chatgpt.com", // lien vers le cours de la Krugerrand
     },
     {
       name: "American Eagle (États-Unis)",
       image: "/d.png",
       value: "3 023,19 $",
       percent: "-11,64%",
+      link: "https://www.cours-or.ch/or/pieces-d-or/american-eagle/?utm_source=chatgpt.com", // lien vers le cours de l'American Eagle
     },
-    
   ];
+
   const swiperRef = useRef(null);
+
   return (
     <>
       <div className="relative">
@@ -78,9 +83,13 @@ export default function CoinSlider() {
               >
                 {item.percent}
               </span>
-              <div className="bg-[#F2F4F7]  mt-4 py-4 font-semibold text-xs text-black border-white group-hover:border-[#8F7130] group-hover:text-white border-2 group-hover:bg-[#8F7130]">
-                CONSULTER
-              </div>
+
+              {/* Ajout du lien autour du bouton CONSULTER */}
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="bg-[#F2F4F7] mt-4 py-4 font-semibold text-xs text-black border-white group-hover:border-[#8F7130] group-hover:text-white border-2 group-hover:bg-[#8F7130]">
+                  CONSULTER
+                </div>
+              </a>
             </SwiperSlide>
           ))}
         </Swiper>
