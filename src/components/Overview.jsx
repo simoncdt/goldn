@@ -45,6 +45,7 @@ export default function Overview() {
         </Wrapper>
         <div className="text-center w-full text-white">
           <Button
+          link={"/cours-or"}
             text="Voir les cours de LOR"
             className={"bg-[#8F7130] "}
           />

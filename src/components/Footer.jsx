@@ -104,7 +104,7 @@ export default function Footer() {
                       key={index}
                       className="py-2"
                     >
-                      <Link className="hover:text-[#D6BE82] transition">
+                      <Link to={"/contact"} className="hover:text-[#D6BE82] transition">
                         {item}
                       </Link>
                     </li>
