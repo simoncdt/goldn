@@ -14,41 +14,30 @@ import { useRef } from "react";
 export default function CoinSlider() {
   const coinItem = [
     {
-      name: "Croix suiise 20frs",
+      name: "Croix suisse 20frs",
       image: "/coin1.jpg",
       value: "523.92 $",
       percent: "+ 0.24 %",
     },
     {
-      name: "Croix suiise 20frs",
-      image: "/coin1.jpg",
-      value: "523.92 $",
-      percent: "+ 0.24 %",
+      name: "Maple Leaf (Canada)",
+      image: "/z.png",
+      value: "3 168,51 $",
+      percent: " -10,02%",
     },
     {
-      name: "Croix suiise 20frs",
-      image: "/coin1.jpg",
-      value: "523.92 $",
-      percent: "+ 0.24 %",
+      name: "Krugerrand (Afrique du Sud)",
+      image: "/k.png",
+      value: "3 168,51 $",
+      percent: "-10,59%",
     },
     {
-      name: "Croix suiise 20frs",
-      image: "/coin1.jpg",
-      value: "523.92 $",
-      percent: "+ 0.24 %",
+      name: "American Eagle (États-Unis)",
+      image: "/d.png",
+      value: "3 023,19 $",
+      percent: "-11,64%",
     },
-    {
-      name: "Croix suiise 20frs",
-      image: "/coin1.jpg",
-      value: "523.92 $",
-      percent: "+ 0.24 %",
-    },
-    {
-      name: "Croix suiise 20frs",
-      image: "/coin1.jpg",
-      value: "523.92 $",
-      percent: "+ 0.24 %",
-    },
+    
   ];
   const swiperRef = useRef(null);
   return (
