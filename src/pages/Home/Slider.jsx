@@ -24,11 +24,12 @@ export default function Slider() {
       button: "Investir dans l'Or",
       link: "./achat-or",
     },
-    {
+    { 
+      backgroundImage: "/bg-image1.webp",
       head: "Rachat de votre Or",
       content:
         "<b>Vendre de l'or</b> et tous les metaux precieux argent paltin plladium sous toutes ses forms bijoux en or or dentaire debris dor et or industrie",
-      button: "Ventre D'or",
+      button: "Vente D'or",
       link: "./vente-or",
     },
   ];
