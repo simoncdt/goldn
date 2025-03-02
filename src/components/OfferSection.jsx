@@ -47,6 +47,7 @@ export default function OfferSection() {
             ))}
           </div>
           <Button
+          link={'/rachat-bijoux'}
             text={"Rachat de bijoux"}
             className={" bg-[#5A3C31]  "}
           />

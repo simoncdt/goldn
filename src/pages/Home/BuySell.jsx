@@ -16,6 +16,7 @@ export default function BuySell() {
               formulaire et un de nos conseillers va vous contacte
             </div>
             <Button
+            link={'/achat-or'}
               text={"Demande D'achat d'or"}
               className={
                 " bg-[#5A3C31] text-center mx-auto block w-fit md:ml-0 md:absolute md:-bottom-8 md:left-1/2 md:-translate-x-1/2"
@@ -34,6 +35,7 @@ export default function BuySell() {
               afin de vous accompagner dans votre démarche.{" "}
             </div>
             <Button
+            link={'/vente-or'}
               text={"Demande de vente d'or"}
               className={
                 " bg-[#8F7130]  text-center mx-auto block w-fit md:ml-0 md:absolute md:-bottom-8 md:left-1/2 md:-translate-x-1/2"

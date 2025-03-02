@@ -33,7 +33,9 @@
   .swiper-slide img {
  
   }
-  
+  .swiper-slide.custom-slide {
+    border-bottom-left-radius: 12%;
+padding: 0; }
   .swiper {
     margin-left: auto;
     margin-right: auto;

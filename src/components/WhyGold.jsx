@@ -1,3 +1,5 @@
+import Button from "./button";
+
 export default function WhyGold() {
   return (
     <>
@@ -115,9 +117,9 @@ export default function WhyGold() {
 
         {/* Bouton d'action */}
         <div className="flex justify-center my-12">
-          <button className="bg-[#8F7130] text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-opacity-80 transition">
-            Découvrir Nos Offres
-          </button>
+          <Button text=" Découvrir Nos Offres" link={'/contact'} className="bg-[#8F7130] text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-opacity-80 transition"/>
+         
+          
         </div>
       </div>
     </>

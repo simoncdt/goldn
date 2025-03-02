@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import Wrapper from "./Wrapper";
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -42,32 +43,43 @@ export default function Faq() {
   };
 
   return (
-    <div className="my-12 max-w-3xl mx-auto px-5">
-      <h2 className="text-4xl font-semibold text-center text-[#A78C4B] mb-8">
-        FAQ
-      </h2>
-      <div className="bg-white shadow-lg rounded-xl border border-[#C9A46C]">
-        {faqList.map((item, index) => (
-          <div key={index} className="border-b last:border-none">
-            <button
-              onClick={() => toggleFaq(index)}
-              className="w-full flex justify-between items-center py-4 px-6 text-lg font-medium text-[#4B3B2B] hover:text-[#A78C4B] transition-all"
+    <Wrapper>
+      <div className="my-12  mx-auto ">
+        <h2 className="text-4xl font-semibold text-center text-[#A78C4B] mb-8">
+          FAQ
+        </h2>
+        <div className="bg-white shadow-lg rounded-xl border border-[#C9A46C]">
+          {faqList.map((item, index) => (
+            <div
+              key={index}
+              className="border-b last:border-none"
             >
-              {item.title}
-              {openIndex === index ? (
-                <ChevronUp size={24} className="text-[#A78C4B]" />
-              ) : (
-                <ChevronDown size={24} className="text-[#4B3B2B]" />
+              <button
+                onClick={() => toggleFaq(index)}
+                className="w-full  flex justify-between items-center py-8 px-6 text-lg font-medium text-[#4B3B2B] hover:text-[#A78C4B] transition-all"
+              >
+                {item.title}
+                {openIndex === index ? (
+                  <ChevronUp
+                    size={24}
+                    className="text-[#A78C4B]"
+                  />
+                ) : (
+                  <ChevronDown
+                    size={24}
+                    className="text-[#4B3B2B]"
+                  />
+                )}
+              </button>
+              {openIndex === index && (
+                <div className="px-12  pb-4 text-[#5A4634] text-md transition-all duration-300">
+                  {item.content}
+                </div>
               )}
-            </button>
-            {openIndex === index && (
-              <div className="px-6 pb-4 text-[#5A4634] text-md transition-all duration-300">
-                {item.content}
-              </div>
-            )}
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </Wrapper>
   );
 }

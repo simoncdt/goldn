@@ -67,7 +67,7 @@ export default function Places() {
     "Valence",
   ];
   return (
-    <div className="md:px-16 py-20 bg-white ">
+    <div className="md:px-16 py-20 bg-white " id="places">
       <Wrapper>
         <div className="text-center mb-16">
           <div className="text-3xl mb-5">
