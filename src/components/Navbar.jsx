@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Wrapper from "./Wrapper";
 import { Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
+//import { FaSearch } from "react-icons/fa";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,6 +46,7 @@ export default function Navbar() {
     },
     {
       label: "Actualités",
+      link:"https://or.fr/actualites",
       content: [],
     },
     {
@@ -62,15 +63,15 @@ export default function Navbar() {
       link:"/contact",
       content: [],
     },
-    {
-      label: "Recherche",
-      icon: (
-        <span className="flex items-center justify-center">
-          <FaSearch className="ml-2 text-white text-xl" />
-        </span>
-      ),
-      content: [],
-    },
+    // {
+    //   label: "Recherche",
+    //   icon: (
+    //     <span className="flex items-center justify-center">
+    //       <FaSearch className="ml-2 text-white text-xl" />
+    //     </span>
+    //   ),
+    //   content: [],
+    // },
   ];
 
   return (

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 export default function TabCoinCoted({ showButton = 1, header, button }) {
   const coinCoted = [
@@ -73,19 +75,19 @@ export default function TabCoinCoted({ showButton = 1, header, button }) {
                     ""
                   ) : showButton === 1 ? (
                     <td className="hidden md:block py-3 px-2 text-right border-r-2">
-                      <button className="mx-auto px-9 rounded-lg text-white py-2 bg-slate-500">
+                      <Link to={'/contact'} className="mx-auto px-9 rounded-lg text-white py-2 bg-slate-500">
                         {button || "Acheter"}
-                      </button>
+                      </Link>
                     </td>
                   ) : (
                     <td className="hidden md:block py-3 px-2 text-right border-r-2">
                       <div className="3xl:flex justify-center ">
-                        <button className="px-9 rounded-lg text-white py-2 mb-1 3xl:mb-0 bg-slate-500 ">
+                        <Link to={'/contact'} className="px-9 rounded-lg text-white py-2 mb-1 3xl:mb-0 bg-slate-500 ">
                           Acheter
-                        </button>
-                        <button className="px-9 rounded-lg text-white py-2 bg-slate-500 ml-2">
+                        </Link>
+                        <Link  to={'/contact'}className="px-9 rounded-lg text-white py-2 bg-slate-500 ml-2">
                           Vendre
-                        </button>
+                        </Link>
                       </div>
                     </td>
                   )}
