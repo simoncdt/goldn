@@ -28,7 +28,7 @@ const Popup = () => {
             Experts en Or & Bijoux
           </h2>
           <p className="text-md text-[#5A4634]">
-            Présents dans toute la France, nos experts vous conseillent pour
+            Présents dans toute le monde entier, nos experts vous conseillent pour
             acheter ou vendre l’or, ainsi que pour expertiser vos bijoux.
           </p>
         </div>

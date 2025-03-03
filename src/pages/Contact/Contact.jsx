@@ -52,7 +52,7 @@ export default function Contact() {
       {/* Description */}
       <div className="my-12 text-lg leading-relaxed">
         <p>
-          Vous avez des questions ? Besoin de conseils ? <br />
+          Vous avez des questions ? Besoin de conseils ? Ou voulez-vous effectuer un achat?<br />
           N’hésitez pas à nous contacter en choisissant la bonne rubrique.
           Notre équipe vous répondra dans les plus brefs délais.
         </p>

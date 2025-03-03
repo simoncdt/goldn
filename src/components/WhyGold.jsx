@@ -17,7 +17,7 @@ export default function WhyGold() {
                 L’achat de pièces d’or est un choix pertinent pour diversifier
                 son épargne. À poids égal, toutes les pièces ne se valent pas.
                 Un sondage OpinionWay mené en 2019 révèle que près de 75 % des
-                Français considèrent l’or comme un investissement pérenne en
+                gens considèrent l’or comme un investissement pérenne en
                 temps de crise. Les pièces d’or présentent un avantage certain
                 puisque leur valeur varie peu pendant les périodes de
                 croissance économique. Lors des récessions, les investisseurs

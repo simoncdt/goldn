@@ -77,7 +77,7 @@ export default function Places() {
             Sélectionnez le Comptoir National de lOr le plus proche de chez vous
           </div>
           <div className=" max-w-3xl mx-auto">
-            Nos Comptoirs sont présents sur toute la France. Vous serez
+            Nos Comptoirs sont présents sur toute la France et dans tout le monde entier. Vous serez
             conseillé par un expert pour acheter votre Or, vendre votre Or ainsi
             que de largent ou dautres métaux précieux. Lestimation est gratuite
             et sans engagement.
