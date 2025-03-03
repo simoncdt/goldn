@@ -1,7 +1,7 @@
 
 export default function PriceCard() {
   const data = [
-    { product: "Lingot d'or 1kg", value: "24422806.20", percent: "+0,25%" },
+    { product: "Lingot d'or 1kg", value: "50000.20", percent: "+0,25%" },
     { product: "Once OR,Nyc", value: "2806.20", percent: "+0,25%" },
     { product: "Once OR,Nyc", value: "2806.20", percent: "+0,25%" },
   ];
