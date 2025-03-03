@@ -48,7 +48,7 @@ export default function TabCoinCoted({ showButton = 1, header, button }) {
                 {showButton == 0 ? (
                   ""
                 ) : (
-                  <th className="hidden md:table-cell "></th>
+                  <th className="hidden xs:table-cell w-[160px] 3xl:w-[270px]"></th>
                 )}
               </tr>
             </thead>
@@ -80,12 +80,12 @@ export default function TabCoinCoted({ showButton = 1, header, button }) {
                       </Link>
                     </td>
                   ) : (
-                    <td className="hidden md:block py-3 px-2 text-right border-r-2">
-                      <div className="3xl:flex justify-center ">
-                        <Link to={'/contact'} className="px-9 rounded-lg text-white py-2 mb-1 3xl:mb-0 bg-slate-500 ">
+                    <td className="hidden md:table-cell h-full py-3 px-2 text-right border-r-2">
+                      <div className=" text-center flex flex-col 3xl:flex-row gap-2 items-center h-full  3xl:flex justify-center ">
+                        <Link to={'/contact'} className="px-9 w-32 rounded-lg text-white py-2 mb-1 3xl:mb-0 bg-slate-500 ">
                           Acheter
                         </Link>
-                        <Link  to={'/contact'}className="px-9 rounded-lg text-white py-2 bg-slate-500 ml-2">
+                        <Link  to={'/contact'}className="px-19 w-32 rounded-lg text-white py-2 bg-slate-500 ">
                           Vendre
                         </Link>
                       </div>
