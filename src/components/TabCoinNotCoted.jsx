@@ -1,27 +1,7 @@
-export default function TabCoinNotCoted() {
-  const coinCoted = [
-    {
-      image: "/coin1.jpg",
-      title: "20 $",
-      cours: "2.244 $",
-      variation: "$10",
-      prime: 5,
-    },
-    {
-      image: "/coin1.jpg",
-      title: "20 $",
-      cours: "2.244 $",
-      variation: "$20",
-      prime: 3,
-    },
-    {
-      image: "/coin1.jpg",
-      title: "20 $",
-      cours: "2.244 $",
-      variation: "$30",
-      prime: 2,
-    },
-  ];
+/* eslint-disable react/prop-types */
+export default function TabCoinNotCoted({coinImage}) {
+
+  
   return (
     <>
       <div className="py-9 px-2  w-full">
@@ -38,7 +18,7 @@ export default function TabCoinNotCoted() {
               </tr>
             </thead>
             <tbody className="text-gray-600  font-light">
-              {coinCoted.map((item) => (
+              {coinImage.map((item) => (
                 <tr
                   key={item.id}
                   className="border-b border-l border-gray-200 bg-[#FAFAFA] hover:bg-gray-100"

@@ -10,6 +10,7 @@ import "./styleCoin.css";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function CoinSlider() {
   const coinItem = [
@@ -127,11 +128,10 @@ export default function CoinSlider() {
               </span>
 
               {/* Ajout du lien autour du bouton CONSULTER */}
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <div className="bg-[#F2F4F7] mt-4 py-4 font-semibold text-xs text-black border-white group-hover:border-[#8F7130] group-hover:text-white border-2 group-hover:bg-[#8F7130]">
+                <Link to={'/contact'} className=" block bg-[#F2F4F7] mt-4 py-4 font-semibold text-xs text-black border-white group-hover:border-[#8F7130] group-hover:text-white border-2 group-hover:bg-[#8F7130]">
                   ACHETER
-                </div>
-              </a>
+                </Link>
+              
             </SwiperSlide>
           ))}
         </Swiper>

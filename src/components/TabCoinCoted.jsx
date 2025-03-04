@@ -1,30 +1,8 @@
 import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
-export default function TabCoinCoted({ showButton = 1, header, button }) {
-  const coinCoted = [
-    {
-      image: "/coin1.jpg",
-      title: "20 $",
-      cours: "2.244 $",
-      variation: "$10",
-      prime: 5,
-    },
-    {
-      image: "/coin1.jpg",
-      title: "20 $",
-      cours: "2.244 $",
-      variation: "$20",
-      prime: 3,
-    },
-    {
-      image: "/coin1.jpg",
-      title: "20 $",
-      cours: "2.244 $",
-      variation: "$30",
-      prime: 2,
-    },
-  ];
+export default function TabCoinCoted({ showButton = 1, header, button,coinCoted }) {
+ 
   return (
     <>
       <div className="py-9 px-2  w-full  ">

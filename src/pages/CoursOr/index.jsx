@@ -12,28 +12,50 @@ import ShowCase from "../../components/ShowCase";
 import CoursFrame from "./CoursFrame";
 const coinCoted = [
   {
-    image: "/coin1.jpg",
-    title: "20 $",
-    cours: "2.244 $",
-    variation: "$10",
-    prime: 5,
+    title: "Once d'Or",
+    cours: "2 759.01 €",
+    min: "2 740.86 €",
+    max: "2 763.31 €",
+    moy: "2 762.16 €",
+    var: "-0.11%",
   },
   {
-    image: "/coin1.jpg",
-    title: "20 $",
-    cours: "2.244 $",
-    variation: "$20",
-    prime: 3,
+    title: "Lingot d'Or",
+    cours: "88 704.08 €",
+    min: "88 120.64 €",
+    max: "88 842.61 €",
+    moy: "88 805.52 €",
+    var: "-0.11%",
   },
   {
-    image: "/coin1.jpg",
-    title: "20 $",
-    cours: "2.244 $",
-    variation: "$30",
-    prime: 2,
+    title: "Gramme d'Or",
+    cours: "88.71 €",
+    min: "88.13 €",
+    max: "88.85 €",
+    moy: "88.81 €",
+    var: "-0.11%",
   },
 ];
+
+const fixingLondres = [
+  {
+    date: "03/03/2025, PM",
+    title: "Once d'Or",
+    cours: "2 837.74 €",
+  },
+ 
+  {
+    date: "03/03/2025, PM",
+    title: "Gramme d'Or",
+    cours: "88.26 €",
+  },
+  
+];
+
+export { coinCoted, fixingLondres };
+
 export default function index() {
+  
   return (
     <>
       <CoursFrame
@@ -83,11 +105,11 @@ export default function index() {
                         className="border-b border-l border-gray-200 bg-[#FAFAFA] hover:bg-gray-100"
                       >
                         <td className="py-3 px-6">{item.title}</td>
-                        <td className=" py-3 px-6">{item.title}</td>
-                        <td className="py-3 px-6">{item.cours}</td>
-                        <td className="py-3 px-6">{item.prime}</td>
-                        <td className="py-3 px-6">{item.cours}</td>
-                        <td className="py-3 px-6">{item.prime}</td>
+                        <td className=" py-3 px-6">{item.cours}</td>
+                        <td className="py-3 px-6">{item.min}</td>
+                        <td className="py-3 px-6">{item.max}</td>
+                        <td className="py-3 px-6">{item.moy}</td>
+                        <td className="py-3 px-6">{item.var}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -112,13 +134,13 @@ export default function index() {
                     </tr>
                   </thead>
                   <tbody className="text-gray-600 text-base font-light">
-                    {coinCoted.map((item) => (
+                    {fixingLondres.map((item) => (
                       <tr
                         key={item.id}
                         className="border-b border-l border-gray-200 bg-[#FAFAFA] hover:bg-gray-100"
                       >
                         <td className="py-3 px-6">{item.title}</td>
-                        <td className=" py-3 px-6">{item.title}</td>
+                        <td className=" py-3 px-6">{item.cours}</td>
                         <td className="py-3 px-6">{item.cours}</td>
                         <td className="py-3 px-6">{item.prime}</td>
                         <td className="py-3 px-6">{item.cours}</td>
