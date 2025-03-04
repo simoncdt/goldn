@@ -54,7 +54,7 @@ export default function ContactForm() {
           <label className="block font-medium mb-2">Numéro de téléphone*</label>
           <input
             type="tel"
-            placeholder="+33 99 99 99 99"
+            placeholder="+33 7 01 05 10 09"
             className="w-full border border-[#D1D5DB] px-4 py-3 rounded-md focus:ring-2 focus:ring-[#C9A227] outline-none"
           />
         </div>
