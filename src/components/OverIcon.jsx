@@ -1,4 +1,3 @@
-import React from "react";
 import { Calendar, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function OverIcon() {

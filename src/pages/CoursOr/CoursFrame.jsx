@@ -344,12 +344,12 @@ export default function CoursFrame({
                 <Button
                 link={"/achat-or"}
                   text={"Achetez de lOr"}
-                  className={"bg-red-400 mr-5 block md:flex w-full md:w-fit mb-2"}
+                  className={"bg-[#5A3C31] mr-5 block md:flex w-full md:w-fit mb-2"}
                 />
                 <Button
                 link={"/vente-or"}
                   text={"Vendez votre Or"}
-                  className={"bg-red-400 block w-full md:flex md:w-fit "}
+                  className={"bg-[#8F7130] block w-full md:flex md:w-fit "}
                 />
               </div>
             </div>
