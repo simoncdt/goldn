@@ -139,13 +139,13 @@ export default function CoinSlider() {
         {/* Boutons de navigation indépendants */}
         <button
           onClick={() => swiperRef.current.swiper.slidePrev()}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-50 px-2 py-1 bg-black/50 text-white rounded-full"
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-40 px-2 py-1 bg-black/50 text-white rounded-full"
         >
           <i className="bx bx-chevron-left text-3xl"></i>
         </button>
         <button
           onClick={() => swiperRef.current.swiper.slideNext()}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-50 px-2 py-1 bg-black/50 text-white rounded-full"
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-40 px-2 py-1 bg-black/50 text-white rounded-full"
         >
           <i className="bx bx-chevron-right text-3xl"></i>
         </button>

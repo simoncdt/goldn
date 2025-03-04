@@ -15,6 +15,7 @@ import Slider from "./Slider";
 import BuySell from "./BuySell";
 import { useEffect, useState } from "react";
 import Popup from "../../components/PopUp";
+import MobileNavBar from "../../components/MobileNavBar";
 export default function Index() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -27,19 +28,16 @@ export default function Index() {
       <div className="bg-[#FAFAFA] font-serif">
         <Popup />
         <Layout>
-          <Navbar />
+          <Navbar  />
           <Slider />
           <Overview />
           <ShowCase />
-          {/* <FindUs /> */}
           <Review />
           <OfferSection />
           <BuySell />
-          {/* <News /> */}
           <NewsLetter />
           <ShowCase title={"Nos services"} />
           <Places />
-          {/* <Download /> */}
           <Footer />
         </Layout>
       </div>
