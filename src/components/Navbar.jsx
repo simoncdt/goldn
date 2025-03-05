@@ -3,10 +3,11 @@ import logo from "../assets/logo.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Wrapper from "./Wrapper";
 import { Link } from "react-router-dom";
+import MobileNavBar from "./MobileNavBar";
 //import { FaSearch } from "react-icons/fa";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const navElement = [
     { title: "FAQ", link: "/faq" },
     { title: "Presse", link: "/faq" },
@@ -40,13 +41,16 @@ export default function Navbar() {
       link: "/cours-or",
       content: [
         { underLabel: "Pièces cotées", link: "/cours-or#pieces-cotees" },
-        { underLabel: "Pièces non cotées", link: "/cours-or#pieces-non-cotees" },
+        {
+          underLabel: "Pièces non cotées",
+          link: "/cours-or#pieces-non-cotees",
+        },
         { underLabel: "Pièces modernes", link: "/cours-or-moderne" },
       ],
     },
     {
       label: "Actualités",
-      link:"https://or.fr/actualites",
+      link: "https://or.fr/actualites",
       content: [],
     },
     {
@@ -55,29 +59,21 @@ export default function Navbar() {
           <FaMapMarkerAlt className="ml-2 text-xl text-gold" /> Nos comptoirs
         </span>
       ),
-      link:"/#places",
+      link: "/#places",
       content: [],
     },
     {
       label: "Prendre RDV",
-      link:"/contact",
+      link: "/contact",
       content: [],
-    },
-    // {
-    //   label: "Recherche",
-    //   icon: (
-    //     <span className="flex items-center justify-center">
-    //       <FaSearch className="ml-2 text-white text-xl" />
-    //     </span>
-    //   ),
-    //   content: [],
-    // },
+    }
   ];
 
   return (
     <div className="w-full">
+      
       {/* Barre des métaux précieux */}
-      <div className="w-full bg-black text-gold p-2">
+      <div className="hidden xl:block w-full bg-black text-gold p-2 ">
         <Wrapper>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-center font-semibold text-sm md:text-base">
             <div className="min-w-[120px]">
@@ -103,7 +99,7 @@ export default function Navbar() {
       {/* Navbar principale */}
       <header className="w-full bg-[#1A1A1A] shadow-md">
         <Wrapper>
-          <div className="flex justify-between items-center py-6">
+          <div className="flex justify-between items-center py-6 z-50 ">
             <Link to="/">
               <img
                 src={logo}
@@ -137,27 +133,18 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
-            <i
-              className="bx bx-menu xl:hidden block text-5xl cursor-pointer text-white"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            ></i>
+            <span onClick={() => setOpen(!open)}>
+  <i
+    className={`xl:hidden block text-5xl cursor-pointer text-white transition-transform duration-300 ${
+      open ? "bx bx-x" : "bx bx-menu"
+    }`}
+  ></i>
+</span>
+
           </div>
 
           {/* Menu mobile */}
-          <div
-            className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 text-lg transition-transform ${
-              isMenuOpen ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {navElement.map((item, index) => (
-              <li
-                key={index}
-                className="list-none w-full text-center p-4 hover:bg-gold hover:text-black transition-all cursor-pointer"
-              >
-                {item.title}
-              </li>
-            ))}
-          </div>
+          <MobileNavBar open={open} menuElement={menuElement} navElement={navElement} />
         </Wrapper>
 
         {/* Menu secondaire */}
@@ -182,7 +169,7 @@ export default function Navbar() {
                     {item.label}
                   </Link>
                   {item.content.length > 0 && (
-                    <div className="absolute z-50 left-0 top-full hidden group-hover:flex flex-col bg-white shadow-md p-2 w-full">
+                    <div className="absolute z-60 left-0 top-full hidden group-hover:flex flex-col bg-white shadow-md p-2 w-full">
                       {item.content.map((secondItem, i) => (
                         <Link
                           key={i}
