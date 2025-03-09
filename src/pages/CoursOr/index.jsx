@@ -87,7 +87,7 @@ export default function index() {
               </div>
 
               <div className="overflow-x-auto">
-                <table className="min-w-full   overflow-hidden rounded-t-lg">
+                <table className="min-w-full text-sm md:text-base   overflow-hidden rounded-t-lg">
                   <thead>
                     <tr className="bg-[#686868] text-white text-sm leading-normal">
                       <th className="py-3 w-1/5"></th>
@@ -122,7 +122,7 @@ export default function index() {
               <div className="text-lg mb-6 ">Fixings de Londres</div>
 
               <div className="overflow-x-auto">
-                <table className="min-w-full   overflow-hidden rounded-t-lg">
+                <table className="min-w-full text-sm md:text-base  overflow-hidden rounded-t-lg">
                   <thead>
                     <tr className="bg-[#686868] text-white text-sm leading-normal">
                       <th className="py-3 w-1/5"></th>
@@ -133,7 +133,7 @@ export default function index() {
                       <th className="py-3 px-5 text-left ">var</th>
                     </tr>
                   </thead>
-                  <tbody className="text-gray-600 text-base font-light">
+                  <tbody className="text-gray-600  font-light">
                     {fixingLondres.map((item) => (
                       <tr
                         key={item.id}
