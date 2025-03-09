@@ -10,7 +10,7 @@ export default [
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: globals.browser, // Ceci permet d'utiliser des variables globales côté navigateur
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
@@ -33,6 +33,23 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+    },
+  },
+  {
+    // Ajouter une configuration spécifique pour le backend (Node.js)
+    files: ['server/**/*.js'],  // Si tu as ton code backend dans un dossier "server"
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: { ...globals.node, ...globals.browser },  // Ajout des variables globales pour Node.js et le navigateur
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module', // Cela peut être 'script' si tu n'utilises pas des modules ES
+      },
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      'no-undef': ['error', { 'typeof': true }],
+      // Autres règles spécifiques à Node.js si nécessaire
     },
   },
 ]
