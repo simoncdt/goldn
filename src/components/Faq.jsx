@@ -42,11 +42,11 @@ export default function Faq() {
   };
 
   return (
-    <div className="py-16 max-w-6xl mx-auto px-10">
+    <div className="py-16 max-w-6xl mx-auto px-4 md:px-10">
       <h2 className="text-5xl font-semibold text-center text-[#A78C4B] mb-10">
         FAQ
       </h2>
-      <div className="bg-white shadow-xl rounded-2xl border border-[#C9A46C] p-6">
+      <div className="bg-white shadow-xl rounded-2xl border border-[#C9A46C] md:p-6">
         {faqList.map((item, index) => (
           <div key={index} className="border-b last:border-none">
             <button

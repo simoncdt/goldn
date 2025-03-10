@@ -51,7 +51,7 @@ export default function OfferSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2  md:grid-cols-5 mb-10">
+          <div className="grid grid-cols-2  md:grid-cols-5 mb-10  ">
             {offersItem.map((item, index) => (
               <div
                 key={index}
