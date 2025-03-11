@@ -16,6 +16,7 @@ export default function NewsLetter() {
             <Input
               placeholder={"Votre adresse e-mail"}
               textButton={"Valider"}
+              width={" 200px"}
             />
             <a
               href=""

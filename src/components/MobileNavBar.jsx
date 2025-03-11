@@ -1,11 +1,22 @@
 /* eslint-disable react/prop-types */
 import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function MobileNavBar({ open, menuElement, navElement }) {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden"; // Bloque le scroll de la page
+    } else {
+      document.body.style.overflow = ""; // Réactive le scroll
+    }
+
+    return () => {
+      document.body.style.overflow = ""; // Nettoyage au démontage
+    };
+  }, [open]);
   return (
     <>
-      
       <AnimatePresence mode="wait">
         {open && (
           <motion.div
@@ -13,15 +24,9 @@ export default function MobileNavBar({ open, menuElement, navElement }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -500 }}
             transition={{ duration: 0.3 }}
-            className="absolute xl:hidden shadow-2xl top-50 left-0 w-full  z-50"
+            className="absolute xl:hidden shadow-2xl top-50 left-0 w-full z-50 h-screen bg-yellow-600 overflow-y-auto"
           >
-            {open && (
-              <div
-                className="fixed top-[500px] inset-0 translate-[3s] bg-black/50 z-40"
-                // Ferme la navbar en cliquant sur l'overlay
-              ></div>
-            )}
-            <div className=" shadow-lg  text-xl font-semibold uppercase bg-yellow-600 text-white pt-5 absolute w-full z-50 ">
+            <div className=" shadow-lg pb-24 text-xl font-semibold uppercase bg-yellow-600 text-white pt-5 absolute w-full z-50 ">
               <ul className="flex flex-col justify-center items-start ">
                 {menuElement.map((item, index) => (
                   <li
@@ -74,13 +79,13 @@ export default function MobileNavBar({ open, menuElement, navElement }) {
                   </li>
                 ))}
                 <li className="w-full bg-white">
-                <Link
-                  to="/account"
-                  className="px-6 text-black text-center flex items-center justify-center  py-5 shadow-xl m-2 rounded-lg bg-gold  hover:bg-[#343437] hover:text-white transition-all"
-                >
-                  Connexion
-                </Link>
-              </li>
+                  <Link
+                    to="/account"
+                    className="px-6 text-black text-center flex items-center justify-center  py-5 shadow-xl m-2 rounded-lg bg-gold  hover:bg-[#343437] hover:text-white transition-all"
+                  >
+                    Connexion
+                  </Link>
+                </li>
               </ul>
             </div>
           </motion.div>

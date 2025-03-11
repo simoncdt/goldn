@@ -3,7 +3,7 @@ import Wrapper from "../../components/Wrapper";
 
 export default function BuySell() {
   return (
-    <div className="bg-gray-200 pt-16 pb-20 md:px-8 xl:px-36  ">
+    <div className="bg-gray-200 pt-16 pb-20 md:px-8 ps-2 xl:px-36  ">
       <Wrapper>
         <div className="grid md:grid-cols-2  gap-10   xl:gap-44">
           <div className="bg-white px-7 pt-14 pb-12 md:pb-20 rounded-xl  md:relative">

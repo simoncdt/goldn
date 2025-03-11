@@ -1,49 +1,48 @@
 #app {
-    height: 100%;
-  }
-  html,
-  body {
-    position: relative;
-    height: 100%;
-  }
-  
-  body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+}
 
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    
-  }
-  
-  .swiper-slide img {
- 
-  }
-  .swiper-slide.custom-slide {
-    border-bottom-left-radius: 12%;
-padding: 0; }
-  .swiper {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .mySwiper {
-  
-    display: flex;
-  }
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+}
+
+.swiper-slide img {
+}
+.swiper-slide.custom-slide {
+  border-bottom-left-radius: 12%;
+  padding: 0;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mySwiper {
+  display: flex;
+}
 .App {
   text-align: center;
 }

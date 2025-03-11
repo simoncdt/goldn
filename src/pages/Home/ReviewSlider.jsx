@@ -95,7 +95,7 @@ export default function ReviewSlider() {
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index} className="flex p-3">
-              <div className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow-lg">
+              <div className="flex items-start space-x-4 bg-white p-4 rounded-lg shadow-lg">
                 <img src={review.image} alt="Client" className="w-16 h-16 rounded-full object-cover" />
                 <div className="text-left">
                   <h3 className="text-base font-medium">{review.name}</h3>

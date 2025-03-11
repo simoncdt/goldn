@@ -281,12 +281,12 @@ export default function CoursFrame({
       <div className="bg-[#FAFAFA] font-serif">
         <Layout>
           <Navbar />
-          <div className="p-12">
+          <div className="md:p-12">
             <div className=" flex flex-col text-3xl items-center font-semibold m-7">
               {title}
               <span>Le mardi 25 fevrier 2025</span>
             </div>
-            <div className="text-center text-base">{presentation}</div>
+            <div className="text-center px-2 text-base">{presentation}</div>
           </div>
 
           <div className="md:px-16 mx-2">

@@ -25,7 +25,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="bg-[#FAFAFA] font-serif">
+      <div className="bg-[#FAFAFA] w-full font-serif">
         <Popup />
         <Layout>
           <Navbar  />
