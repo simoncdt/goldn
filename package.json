@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server/server.js",
     "devback": "nodemon ./server/server.js",
     "dev": "vite",
     "build": "vite build",
@@ -15,6 +15,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "lucide-react": "^0.476.0",
+    "morgan": "^1.10.0",
     "motion": "^12.4.10",
     "mysql2": "^3.13.0",
     "nodemon": "^3.1.9",
