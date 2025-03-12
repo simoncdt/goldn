@@ -35,7 +35,6 @@ export default function Index() {
           <Review />
           <OfferSection />
           <BuySell />
-          <NewsLetter />
           <ShowCase title={"Nos services"} />
           <Places />
           <Footer />
