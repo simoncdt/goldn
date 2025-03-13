@@ -24,7 +24,7 @@ export default function MobileNavBar({ open, menuElement, navElement }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -500 }}
             transition={{ duration: 0.3 }}
-            className="absolute xl:hidden shadow-2xl top-50 left-0 w-full z-50 h-screen bg-yellow-600 overflow-y-auto"
+            className="absolute xl:hidden shadow-2xl top-50 left-0 w-full z-50 h-screen  overflow-y-auto"
           >
             <div className=" shadow-lg pb-24 text-xl font-semibold uppercase bg-yellow-600 text-white pt-5 absolute w-full z-50 ">
               <ul className="flex flex-col justify-center items-start ">
@@ -78,14 +78,14 @@ export default function MobileNavBar({ open, menuElement, navElement }) {
                     </div>
                   </li>
                 ))}
-                <li className="w-full bg-white">
+                {/* <li className="w-full bg-white">
                   <Link
                     to="/account"
                     className="px-6 text-black text-center flex items-center justify-center  py-5 shadow-xl m-2 rounded-lg bg-gold  hover:bg-[#343437] hover:text-white transition-all"
                   >
                     Connexion
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </motion.div>

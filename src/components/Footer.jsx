@@ -52,22 +52,22 @@ export default function Footer() {
         "FAQ/Guide",
         "Tout savoir sur l'Achat d'Or",
         "Tout savoir sur le Lingot d'Or",
-        <span
+        <Link
+          to={"/achat-lingot-or"}
           key="catalogue"
           className="rounded-lg bg-yellow-700 px-4 py-3"
         >
           Notre catalogue
-        </span>,
+        </Link>,
       ],
     },
   ];
 
   const link = [
     [
-      { title: "A propos" },
-      { title: "Prendre RDV" },
-      { title: "Contactez-nous" },
-      { title: "Recrutement" },
+      { title: "Informations sur l'or ", link: "/cours-or" },
+      { title: "Prendre RDV", link: "/contact" },
+      { title: "Contactez-nous", link: "/contact" },
     ],
     [],
     [
@@ -162,7 +162,10 @@ export default function Footer() {
                     key={index}
                     className="py-2"
                   >
-                    <Link className="hover:text-[#D6BE82] transition">
+                    <Link
+                      to={item.link}
+                      className="hover:text-[#D6BE82] transition"
+                    >
                       {item.title}
                     </Link>
                   </li>
@@ -285,7 +288,6 @@ export default function Footer() {
                     dinformation
                   </div>
                 </div>
-               
               </div>
               <div className="text-xs">
                 Votre email nous permettra de vous adresser des newsletters afin

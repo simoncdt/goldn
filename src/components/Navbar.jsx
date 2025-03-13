@@ -66,12 +66,11 @@ export default function Navbar() {
       label: "Prendre RDV",
       link: "/contact",
       content: [],
-    }
+    },
   ];
 
   return (
     <div className="w-full">
-      
       {/* Barre des métaux précieux */}
       <div className="hidden xl:block w-full bg-black text-gold p-2 ">
         <Wrapper>
@@ -107,7 +106,7 @@ export default function Navbar() {
                 className="w-52 hover:scale-110 transition-transform"
               />
             </Link>
-            <ul className="hidden xl:flex items-center gap-6 text-base text-white">
+            <ul className="hidden xl:flex items-center  gap-6 text-base text-white">
               {navElement.map((item, index) => (
                 <li
                   key={index}
@@ -124,27 +123,30 @@ export default function Navbar() {
                   <div className="px-4 py-2">00-00-00-00</div>
                 </div>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/account"
                   className="px-6 py-2 rounded-lg bg-gold text-white hover:bg-[#A67C00] transition-all"
                 >
                   Connexion
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <span onClick={() => setOpen(!open)}>
-  <i
-    className={`xl:hidden block text-5xl cursor-pointer text-white transition-transform duration-300 ${
-      open ? "bx bx-x" : "bx bx-menu"
-    }`}
-  ></i>
-</span>
-
+              <i
+                className={`xl:hidden block text-5xl cursor-pointer text-white transition-transform duration-300 ${
+                  open ? "bx bx-x" : "bx bx-menu"
+                }`}
+              ></i>
+            </span>
           </div>
 
           {/* Menu mobile */}
-          <MobileNavBar open={open} menuElement={menuElement} navElement={navElement} />
+          <MobileNavBar
+            open={open}
+            menuElement={menuElement}
+            navElement={navElement}
+          />
         </Wrapper>
 
         {/* Menu secondaire */}

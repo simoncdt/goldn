@@ -2,13 +2,10 @@ import Button from "./button";
 import Wrapper from "./Wrapper";
 import CoinSlider from "../pages/Home/CoinSlider";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Overview() {
-  const productElement = ["Nos produits d'or", "cours de l'Or "];
-  const [element, setElement] = useState(0);
-  function changeShow(index) {
-    setElement(index);
-  }
+  
   return (
     <>
       <div className="block  w-full py-12">
@@ -18,34 +15,21 @@ export default function Overview() {
         <div className="bg-[#343437] w-full ">
           <Wrapper>
             <ul className="flex ">
-              {productElement.map((item, index) => (
-                <li
-                  key={index}
-                  className={` text-white px-5 py-5 text-base  ${
-                    index == element ? " border-b-8 border-yellow-600  " : ""
-                  } `}
-                  onClick={() => changeShow(index)}
-                >
-                  {item}
-                </li>
-              ))}
+              <li className=" text-white px-5 py-5 text-base  border-b-8 border-yellow-600 ">
+                Nos produits d'or
+              </li>
+              <Link to={"/cours-or"} className=" text-white px-5 py-5 text-base  hover:border-b-8 hover:border-white ">
+                cours de l'Or{" "}
+              </Link>
             </ul>
           </Wrapper>
         </div>
         <Wrapper>
-          {element == 0 ? (
-            <CoinSlider />
-          ) : (
-            <>
-              <div className="flex flex-col text-center pt-5 my-16 rounded-lg overflow-hidden shadow-lg flex-grow min-h-64">
-                Cours de lor
-              </div>
-            </>
-          )}
+          <CoinSlider />
         </Wrapper>
         <div className="text-center w-full text-white">
           <Button
-          link={"/cours-or"}
+            link={"/cours-or"}
             text="Voir les cours de LOR"
             className={"bg-[#8F7130] "}
           />
