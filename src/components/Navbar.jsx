@@ -82,7 +82,7 @@ export default function Navbar() {
             </div>
             <div className="min-w-[120px]">
               OR <span className="text-white">2942.76 $</span>{" "}
-              <span className="text-red-500">-0.47%</span>
+              <span className="text-green-500">+0.47%</span>
             </div>
             <div className="min-w-[120px]">
               ARGENT <span className="text-white">2942.76 $</span>{" "}

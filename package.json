@@ -2,16 +2,23 @@
   "name": "gold_clone",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
+    "start": "node server/server.js",
+    "devback": "nodemon ./server/server.js",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "lucide-react": "^0.476.0",
+    "morgan": "^1.10.0",
     "motion": "^12.4.10",
+    "mysql2": "^3.13.0",
+    "nodemon": "^3.1.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
@@ -32,5 +39,10 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "vite": "^6.1.0"
-  }
+  },
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

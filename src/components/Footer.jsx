@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import Input from "../pages/Home/Input";
 import Wrapper from "./Wrapper";
 import { Linkedin, Facebook, Phone, Instagram } from "lucide-react";
 
@@ -286,11 +285,7 @@ export default function Footer() {
                     dinformation
                   </div>
                 </div>
-                <Input
-                  placeholder="newsLetter..."
-                  textButton={"M'inscrire"}
-                  className={" 100px "}
-                />
+               
               </div>
               <div className="text-xs">
                 Votre email nous permettra de vous adresser des newsletters afin
