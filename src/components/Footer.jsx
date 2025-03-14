@@ -285,7 +285,11 @@ export default function Footer() {
                     dinformation
                   </div>
                 </div>
+
                 
+
+               
+ 
               </div>
               <div className="text-xs">
                 Votre email nous permettra de vous adresser des newsletters afin
